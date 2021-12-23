@@ -57,11 +57,8 @@
                                             <label class="form-check-label" for="inputRememberPassword">Remember
                                                 Password</label>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="password.html">Forgot
-                                                Password?</a>
-                                            <a type="submit" class="btn btn-primary"
-                                                href="/admin-dashboard">{{ __('Login') }}</a>
+                                        <div class="d-flex align-items-center justify-content-between mt-1 mb-0">
+                                            <button type="submit" class="btn btn-primary">{{ __('Login') }}</button>
 
                                             @if (Route::has('password.request'))
                                                 <a class="btn btn-link" href="{{ route('password.request') }}">
