@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Admindashboard;
+use App\Models\DashboardModel;
 
 use Illuminate\Http\Request;
 
-class AdmindashboardController extends Controller
+class DashboardController extends Controller
 {
     public function __construct()
     {
-        $this->Admindashboard = new Admindashboard();
+        $this->DashboardModel = new DashboardModel();
         $this->middleware('auth');
     }
 
-    public function dashboard()
+    public function index()
     {
         return view('admin-dashboard');
     }

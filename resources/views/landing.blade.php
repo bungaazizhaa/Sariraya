@@ -21,40 +21,7 @@
 </head>
 
 <body>
-    {{-- Navbar saat Admin Login --}}
-    @if (auth()->user() == true)
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/">Admin is Logged In</a>
-            <button><a class="bg-light ps-3" href="/dashboard">Dashboard</a></button>
-            <!-- Navbar Search-->
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
-                @csrf
-                <button type="submit" class="bg-light" href="{{ route('logout') }}">Logout</button>
-            </form>
-        </nav>
-    @endif
-
-    <!-- Navbar -->
-    <div class="container">
-        <div class="navbar">
-            <div class="logo">
-                <img src="{{ asset('assets/images/logo.png') }}" alt="" width="90px">
-            </div>
-            <nav>
-                <ul id="MenuItems">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Products</a>
-                    <li><a href="">Distributors</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-            <img src="{{ asset('assets/images/menu.png') }}" class="menu-icon" onclick="menutoggle()">
-        </div>
-    </div>
-    <!-- Akhir Navbar -->
+    @include('layouts.navbar')
 
     <!-- Slider -->
     <div class="slider">
@@ -151,27 +118,15 @@
             <h1>GOOD NEWS</h1>
             <h4>Here’s the latest news from us to you</h4>
             <div class="grid">
-                <article>
-                    <img src="{{ asset('assets/images/pos1.jpeg') }}" alt="">
-                    <div class="text">
-                        <p>Program Beasiswa Sariraya.Co.Ltd. Japan 2022</p>
-                        <a href="" class="btn lihat">View More</a>
-                    </div>
-                </article>
-                <article>
-                    <img src="{{ asset('assets/images/pos2.jpg') }}" alt="">
-                    <div class="text">
-                        <p>Dinners with Sariraya Group, <br> BI representative Tokyo, BNI etc.</p>
-                        <a href="" class="btn lihat">View More</a>
-                    </div>
-                </article>
-                <article>
-                    <img src="{{ asset('assets/images/pos3.jpg') }}" alt="">
-                    <div class="text">
-                        <p>Foodex Japan 46th 9~12 March, <br> 3750 buyer visiting at Sariraya Booth</p>
-                        <a href="" class="btn lihat">View More</a>
-                    </div>
-                </article>
+                @foreach ($home as $data)
+                    <article>
+                        <img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
+                        <div class="text">
+                            <p>{{ $data->judul_news }}</p>
+                            <a href="" class="btn lihat">View More</a>
+                        </div>
+                    </article>
+                @endforeach
             </div>
         </div>
     </div>

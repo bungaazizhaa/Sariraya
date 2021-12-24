@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdmindashboardController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,21 +16,14 @@ use App\Http\Controllers\AdmindashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
-
-Route::get('/home', function () {
-    return view('landing');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/news', function () {
-    return view('news');
-});
+Route::get('/news', [NewsController::class, 'news'])->name('news');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -38,18 +33,15 @@ Route::get('/login', function () {
     return view('admin-login');
 });
 
-Route::get('/dashboard', [AdmindashboardController::class, 'dashboard']);
-
-Route::get('/admin-news', function () {
-    return view('admin-news');
-});
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/admin-news', [NewsController::class, 'index'])->name('news');
 
 Route::get('/admin-add-news', function () {
-    return view('admin-addnews');
+    return view('admin.news.admin-addnews');
 });
 
 Route::get('/admin-edit-news', function () {
-    return view('admin-editnews');
+    return view('admin.news.admin-editnews');
 });
 
 Auth::routes();
