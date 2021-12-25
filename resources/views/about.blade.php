@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/images') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="{{ asset('assets/images/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
 
 </head>
 
@@ -29,61 +29,63 @@
             <div class="txt">
                 <h1 style="color: aliceblue;">ABOUT US</h1>
             </div>
-            <img src="{{ asset('assets/images/foto1.jpg') }}" alt="" style="width:100%; height:100%;">
+            <img src="{{ asset('assets/images/b33.png') }}" alt="" style="width:100%; height:100%;">
         </div>
     </div>
 
     <!-- Akhir Slider -->
 
     <!-- About -->
-    <div class="row about">
-        <div class="col-lg-6">
-            <img src="{{ asset('assets/images/fotoprofil.jpg') }}" alt="" class="img-fluid" />
-        </div>
-        <div class="col-lg tabel-profil">
-            <h2>PROFILE</h2>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <td>: Sariraya Co.,Ltd.</td>
-                </tr>
-                <tr>
-                    <th>President Director </th>
-                    <td>: TEGUH WAHYUDI</td>
-                </tr>
-                <tr>
-                    <th>Managing Marketing Support Division </th>
-                    <td>: MS. KOMANG IRIANI</td>
-                </tr>
-                <tr>
-                    <th>Managing Import Devision </th>
-                    <td>: Mr. Takahito Sato</td>
-                </tr>
-                <tr>
-                    <th>Managing Production & QC </th>
-                    <td>: MR. JARNO</td>
-                </tr>
-                <tr>
-                    <th>Staﬀ Creative</th>
-                    <td>: Deni Krisdianto</td>
-                </tr>
-                <tr>
-                    <th>Estabilized </th>
-                    <td>: 2005</td>
-                </tr>
-                <tr>
-                    <th>Capital</th>
-                    <td>: 500万</td>
-                </tr>
-                <tr>
-                    <th>Location</th>
-                    <td>: 445-0804. Aichi-Ken,
-                        Nishio-Shi, Yonezu-Cho,
-                        Kitaura 75-1</td>
-                </tr>
-            </table>
-        </div>
+    <div class="container">
+        <div class="row about">
+            <div class="col-lg-6">
+                <img src="{{ asset('assets/images/fotoprofil.jpg') }}" alt="" class="img-fluid" />
+            </div>
+            <div class="col-lg tabel-profil">
+                <h2>PROFILE</h2>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td>: Sariraya Co.,Ltd.</td>
+                    </tr>
+                    <tr>
+                        <th>President Director </th>
+                        <td>: TEGUH WAHYUDI</td>
+                    </tr>
+                    <tr>
+                        <th>Managing Marketing Support Division </th>
+                        <td>: MS. KOMANG IRIANI</td>
+                    </tr>
+                    <tr>
+                        <th>Managing Import Devision </th>
+                        <td>: Mr. Takahito Sato</td>
+                    </tr>
+                    <tr>
+                        <th>Managing Production & QC </th>
+                        <td>: MR. JARNO</td>
+                    </tr>
+                    <tr>
+                        <th>Staﬀ Creative</th>
+                        <td>: Deni Krisdianto</td>
+                    </tr>
+                    <tr>
+                        <th>Estabilized </th>
+                        <td>: 2005</td>
+                    </tr>
+                    <tr>
+                        <th>Capital</th>
+                        <td>: 500万</td>
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        <td>: 445-0804. Aichi-Ken,
+                            Nishio-Shi, Yonezu-Cho,
+                            Kitaura 75-1</td>
+                    </tr>
+                </table>
+            </div>
 
+        </div>
     </div>
     <!-- Akhir About -->
 

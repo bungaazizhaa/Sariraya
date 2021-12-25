@@ -45,4 +45,8 @@ Route::get('/admin-edit-news', function () {
     return view('admin.news.admin-editnews');
 });
 
+Route::get('/admin-contact', function () {
+    return view('admin-contact');
+});
+
 Auth::routes();

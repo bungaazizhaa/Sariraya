@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/images') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="{{ asset('assets/images/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
 
 </head>
 
@@ -119,13 +119,13 @@
             <h4>Here’s the latest news from us to you</h4>
             <div class="grid">
                 @foreach ($home as $data)
-                    <article>
-                        <img style="width:100%;" src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
-                        <div class="text">
-                            <p style="height:50px;">{{ $data->judul_news }}<br></p>
-                            <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View More</a>
-                        </div>
-                    </article>
+                <article>
+                    <img style="width:100%;" src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
+                    <div class="text">
+                        <p style="height:50px;">{{ $data->judul_news }}<br></p>
+                        <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View More</a>
+                    </div>
+                </article>
                 @endforeach
                 <article>
                     <div class="text">

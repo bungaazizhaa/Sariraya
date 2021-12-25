@@ -7,58 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>News - Admin</title>
+    <title>Contact - Admin</title>
     <link href="{{ asset('assets/css/style-admin.css') }}" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
 </head>
 
 <body class="sb-nav-fixed">
-    @include('layouts.sidebar-admin')
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">News</h1>
+                <h1 class="mt-4">Contact</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                    <li class="breadcrumb-item active">News</li>
+                    <li class="breadcrumb-item active">Contact</li>
                 </ol>
-                <!--
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-chart-area me-1"></i>
-                            Area Chart Example
-                        </div>
-                        <div class="card-body"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>
-                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-chart-bar me-1"></i>
-                                    Bar Chart Example
-                                </div>
-                                <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
-                                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-chart-pie me-1"></i>
-                                    Pie Chart Example
-                                </div>
-                                <div class="card-body"><canvas id="myPieChart" width="100%" height="50"></canvas></div>
-                                <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                            </div>
-                        </div>
-                    </div>
-  -->
 
-                <!-- Isi News -->
+                <!-- Isi Contact -->
                 <div class="container-fluid">
-                    <h1 class="mt-4">Table News</h1>
+                    <h1 class="mt-4">Table Information</h1>
                     <div class="card mb-4">
                         <div class="card-header">
                             <a href="{{ url('/admin/keynote/inputKeynoteSpeaker') }}"> <button class="btn btn-primary">Input
@@ -71,26 +38,28 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Judul</th>
-                                            <th>Picture</th>
-                                            <th>Tanggal</th>
-                                            <th>Isi</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Company</th>
+                                            <th>State</th>
+                                            <th>Telephone Number</th>
+                                            <th>Message</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($news as $data)
                                         <tr>
-                                            <td>{{ $data->judul_news }}</td>
-                                            <td><img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="" height="310px" width="288px"></td>
-                                            <td>{{ $data->tanggal_news }}</td>
-                                            <td style="white-space: pre-line">{{ $data->isi_news }}</td>
+                                            <td>judul</td>
+                                            <td>tes</td>
+                                            <td>judul</td>
+                                            <td>judul</td>
+                                            <td>judul</td>
+                                            <td style="white-space: pre-line">isi</td>
                                             <td class="text-center">
                                                 <a href=""><i style="color:#35C668" class="fas fa-edit"></i></a>
                                                 <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10" style="color:#C43030" data-id="" class="fas fa-trash color-danger trash-keynote"></i></a>
                                             </td>
                                         </tr>
-                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -98,7 +67,7 @@
                     </div>
                 </div>
 
-                <!-- Akhir Isi News -->
+                <!-- Akhir Isi Contact -->
 
             </div>
         </main>

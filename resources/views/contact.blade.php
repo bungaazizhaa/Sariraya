@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/images') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="{{ asset('assets/images/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
 
 </head>
 
@@ -54,33 +54,27 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Company</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">State</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Telephone Number</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                                        rows="3"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
                                 <a href="" class="btn btn-primary tombol">Submit</a>
                             </form>
@@ -101,33 +95,27 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Company</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">State</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Telephone Number</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                        placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1"
-                                        rows="3"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                 </div>
                                 <a href="" class="btn btn-primary tombol">Submit</a>
                             </form>

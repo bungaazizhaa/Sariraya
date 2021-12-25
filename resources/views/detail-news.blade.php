@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/images') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="{{ asset('assets/images/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
 
 </head>
 
@@ -32,8 +32,7 @@
         <div class="container">
             <div class="row-news">
                 <div class="col-lg-6">
-                    <img src="{{ url('gambar_news/' . $news->gambar_news) }}" alt="" class="img-fluid"
-                        style="width:550px; border-radius:20px;" />
+                    <img src="{{ url('gambar_news/' . $news->gambar_news) }}" alt="" class="img-fluid" style="width:550px; border-radius:20px;" />
                 </div>
                 <div class="col-lg-6">
                     <p style="white-space: pre-line">{{ $news->isi_news }}</p>
