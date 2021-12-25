@@ -24,26 +24,23 @@
     @include('layouts.navbar')
 
     <!-- News -->
-    @foreach ($news as $data)
-
-        <div class="news">
-            <div class="banner-news">
-                <h3>{{ $data->judul_news }}</h3>
-                <p>{{ $data->tanggal_news }} - {{ $data->tempat_news }}</p>
-            </div>
-            <div class="container">
-                <div class="row-news">
-                    <div class="col-lg-6">
-                        <img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="" class="img-fluid"
-                            style="width:550px; border-radius:20px;" />
-                    </div>
-                    <div class="col-lg-6">
-                        <p style="white-space: pre-line">{{ $data->isi_news }}</p>
-                    </div>
+    <div class="news">
+        <div class="banner-news">
+            <h3>{{ $news->judul_news }}</h3>
+            <p>{{ $news->tanggal_news }} - {{ $news->tempat_news }}</p>
+        </div>
+        <div class="container">
+            <div class="row-news">
+                <div class="col-lg-6">
+                    <img src="{{ url('gambar_news/' . $news->gambar_news) }}" alt="" class="img-fluid"
+                        style="width:550px; border-radius:20px;" />
+                </div>
+                <div class="col-lg-6">
+                    <p style="white-space: pre-line">{{ $news->isi_news }}</p>
                 </div>
             </div>
         </div>
-    @endforeach
+    </div>
     <!-- Akhir News -->
 
     @include('layouts.footer')

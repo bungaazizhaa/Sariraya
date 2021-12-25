@@ -10,7 +10,12 @@ class NewsModel extends Model
 {
     public function allData()
     {
-        return DB::table('tbl_news')->get();
+        return DB::table('tbl_news')->orderByDesc('tanggal_news')->get();
+    }
+
+    public function detailData($id_news)
+    {
+        return DB::table('tbl_news')->where('id_news', $id_news)->first();
     }
 
     public function addData($data)

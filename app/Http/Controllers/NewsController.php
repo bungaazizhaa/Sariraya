@@ -11,7 +11,6 @@ class NewsController extends Controller
     public function __construct()
     {
         $this->NewsModel = new NewsModel();
-        $this->middleware('auth');
     }
 
     public function index()
@@ -20,6 +19,14 @@ class NewsController extends Controller
             'news' => $this->NewsModel->allData()
         ];
         return view('admin.news.admin-news', $data);
+    }
+
+    public function detail($id_news)
+    {
+        $data = [
+            'news' => $this->NewsModel->detailData($id_news)
+        ];
+        return view('detail-news', $data);
     }
 
     public function news()

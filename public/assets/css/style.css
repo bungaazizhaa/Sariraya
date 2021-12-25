@@ -233,20 +233,24 @@ nav a {
 }
 
 .grid {
-    margin: 80px;
-    display: flex;
-    grid-template-columns: repeat(3, ifr);
-    grid-gap: 100px;
+    margin-top : 50px;
+    margin-left : auto;
+    margin-right : auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5%;
+    width: 80%;
     align-items: center;
+    align-content: center;
 }
 
 .grid > article {
     background-color: #fff;
     border: none;
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
-    border-radius: 20px;
+    border-radius: 25px;
+    width: 100%;
     text-align: center;
-    width: auto;
     transition: transform .3s;
 }
 
@@ -258,6 +262,15 @@ nav a {
 .grid > article img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+.grid > article text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin: 0px 10px 10px 10px;
 }
 
 article h3{
@@ -333,13 +346,13 @@ article a{
     width: 150px;
     font-size: 18px;
     font-weight: 5px;
+    margin: 0px 10px 10px 10px;
 
     background-color: #42D12C;
     color: white;
-
-    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.2);
     border-radius: 18px;
     cursor: pointer;
+    
 }
 
 .news img{
@@ -355,6 +368,7 @@ article a{
     margin-top: 80px;
     background-color: #F7F1CB;
     text-align: center;
+
   }
 
   .shop h4 {
@@ -438,7 +452,7 @@ article a{
 }
 
 .myslider-about {
-    height: 400px;
+    height: 655px;
     display: none;
     overflow: hidden;
 }
@@ -590,7 +604,7 @@ article a{
 }
 
 .myslider-kontak {
-    height: 400px;
+    height: 655px;
     display: none;
     overflow: hidden;
 }

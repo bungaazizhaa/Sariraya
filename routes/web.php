@@ -24,6 +24,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/news', [NewsController::class, 'news'])->name('news');
+Route::get('/news/detail/{id_news}', [NewsController::class, 'detail']);
 
 Route::get('/contact', function () {
     return view('contact');
