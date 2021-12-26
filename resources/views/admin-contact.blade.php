@@ -14,6 +14,7 @@
 </head>
 
 <body class="sb-nav-fixed">
+    @include('layouts.sidebar-admin')
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
@@ -23,17 +24,11 @@
                     <li class="breadcrumb-item active">Contact</li>
                 </ol>
 
-                <!-- Isi Contact -->
+                <!-- Isi Form Information -->
                 <div class="container-fluid">
                     <h1 class="mt-4">Table Information</h1>
                     <div class="card mb-4">
-                        <div class="card-header">
-                            <a href="{{ url('/admin/keynote/inputKeynoteSpeaker') }}"> <button class="btn btn-primary">Input
-                                    News</button></a>
-
-                        </div>
                         <div class="card-body">
-
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
@@ -49,12 +44,12 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>judul</td>
                                             <td>tes</td>
-                                            <td>judul</td>
-                                            <td>judul</td>
-                                            <td>judul</td>
-                                            <td style="white-space: pre-line">isi</td>
+                                            <td>tes</td>
+                                            <td>tes</td>
+                                            <td>tes</td>
+                                            <td>tes</td>
+                                            <td style="white-space: pre-line">tes</td>
                                             <td class="text-center">
                                                 <a href=""><i style="color:#35C668" class="fas fa-edit"></i></a>
                                                 <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10" style="color:#C43030" data-id="" class="fas fa-trash color-danger trash-keynote"></i></a>
@@ -67,7 +62,7 @@
                     </div>
                 </div>
 
-                <!-- Akhir Isi Contact -->
+                <!-- Akhir Isi From Information -->
 
             </div>
         </main>

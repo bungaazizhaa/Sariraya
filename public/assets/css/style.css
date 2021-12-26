@@ -669,3 +669,19 @@ article a{
     text-align: center;
     font-weight: bold;
 }
+
+/* Factory */
+.factory {
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.factory h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.peta {
+    text-align: center;
+    margin-top: 30px;
+}

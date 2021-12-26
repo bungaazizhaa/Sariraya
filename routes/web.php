@@ -28,6 +28,30 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/tempe-factory', function () {
+    return view('factory-tempe');
+});
+
+Route::get('/bakso-factory', function () {
+    return view('factory-bakso');
+});
+
+Route::get('/pecel-factory', function () {
+    return view('factory-pecel');
+});
+
+Route::get('/halal-mart-yonezu', function () {
+    return view('mart-yonezu');
+});
+
+Route::get('/halal-mart-tanukui', function () {
+    return view('mart-tanukui');
+});
+
+Route::get('/halal-mart-grosser', function () {
+    return view('mart-grosser');
+});
+
 Route::get('/login', function () {
     return view('admin-login');
 });
