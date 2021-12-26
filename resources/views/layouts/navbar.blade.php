@@ -28,12 +28,15 @@
                 <li class="nav-item"><a class="{{ Request::segment(1) === 'news' ? 'text-success' : null }}"
                         href="/news">News</a></li>
                 <li class="nav-item"><a class="{{ Request::segment(1) === 'products' ? 'text-success' : null }}"
-                        href="/products">Products</a>
-                <li class="nav-item"><a
-                        class="{{ Request::segment(1) === 'distributors' ? 'text-success' : null }}" a
-                        href="/distributors">Distributors</a></li>
+                        href="/products">Our Factory</a>
+                <li class="nav-item"><a class="{{ Request::segment(1) === 'products' ? 'text-success' : null }}"
+                        href="/products">Our Resto</a>
+                <li class="nav-item"><a class="{{ Request::segment(1) === 'products' ? 'text-success' : null }}"
+                        href="/products">Our Store</a>
                 <li class="nav-item"><a class="{{ Request::segment(1) === 'contact' ? 'text-success' : null }}"
                         href="/contact">Contact</a></li>
+                <li class="nav-item"><a class="" a href="https://japanhalal.net">Online Shop</a>
+                </li>
             </ul>
         </nav>
         <img src="{{ asset('assets/images/menu.png') }}" class="menu-icon" onclick="menutoggle()">

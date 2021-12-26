@@ -13,14 +13,6 @@ class NewsController extends Controller
         $this->NewsModel = new NewsModel();
     }
 
-    public function index()
-    {
-        $data = [
-            'news' => $this->NewsModel->allData()
-        ];
-        return view('admin.news.admin-news', $data);
-    }
-
     public function detail($id_news)
     {
         $data = [
@@ -29,7 +21,7 @@ class NewsController extends Controller
         return view('detail-news', $data);
     }
 
-    public function news()
+    public function index()
     {
         $data = [
             'news' => $this->NewsModel->allData()

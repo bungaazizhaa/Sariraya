@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\AdminNewsController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +20,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/news', [NewsController::class, 'news'])->name('news');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/news', [NewsController::class, 'index'])->name('news');
 Route::get('/news/detail/{id_news}', [NewsController::class, 'detail']);
 
 Route::get('/contact', function () {
@@ -35,18 +33,16 @@ Route::get('/login', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/admin-news', [NewsController::class, 'index'])->name('news');
-
-Route::get('/admin-add-news', function () {
-    return view('admin.news.admin-addnews');
-});
-
-Route::get('/admin-edit-news', function () {
-    return view('admin.news.admin-editnews');
-});
-
 Route::get('/admin-contact', function () {
     return view('admin-contact');
 });
-
 Auth::routes();
+
+// CRUD ADMIN
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin-news', [AdminNewsController::class, 'index'])->name('news');
+    Route::post('/admin-news/insertnews', [AdminNewsController::class, 'insert']);
+    Route::get('/admin-news/editnews/{id_news}', [AdminNewsController::class, 'edit']);
+    Route::post('/admin-news/updatenews/{id_news}', [AdminNewsController::class, 'update']);
+    Route::get('/admin-news/deletenews/{id_news}', [AdminNewsController::class, 'delete']);
+});
