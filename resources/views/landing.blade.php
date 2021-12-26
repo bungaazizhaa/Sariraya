@@ -104,8 +104,7 @@
     <div class="row katalog">
         <div class="col-lg teksdonlot">
             <p>DOWNLOAD SARIRAYA <br> CATALOGUE HERE!</p>
-            <a href="https://drive.google.com/file/d/1RFcPb3Jz-w5jTfxX5NYBNKrTwg3ZfhA6/view"
-                class="btn donlot">DOWNLOAD</a>
+            <a href="https://drive.google.com/file/d/1RFcPb3Jz-w5jTfxX5NYBNKrTwg3ZfhA6/view" class="btn donlot">DOWNLOAD</a>
         </div>
         <div class="col-lg-6">
             <img src="{{ asset('assets/images/katalog.png') }}" alt="" class="img-fluid" />
@@ -120,13 +119,13 @@
             <h4>Here’s the latest news from us to you</h4>
             <div class="grid">
                 @foreach ($home as $data)
-                    <article>
-                        <img style="width:100%;" src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
-                        <div class="text">
-                            <p style="height:50px;">{{ $data->judul_news }}<br></p>
-                            <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View More</a>
-                        </div>
-                    </article>
+                <article>
+                    <img style="width:100%;" src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
+                    <div class="text">
+                        <p style="height:50px;">{{ $data->judul_news }}<br></p>
+                        <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View More</a>
+                    </div>
+                </article>
                 @endforeach
                 <article>
                     <div class="text">
@@ -138,7 +137,7 @@
     </div>
     <!-- Akhir Section News -->
 
-    <!-- Section Online Shop -->
+    <!-- Section Online Shop  -->
     <div class="row shop">
         <div class="col-lg-5">
             <img src="{{ asset('assets/images/mas.png') }}" alt="" class="img-fluid" />

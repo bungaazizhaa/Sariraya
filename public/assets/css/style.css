@@ -296,6 +296,8 @@ article a{
 
 /* Katalog */
 .katalog {
+    max-width:100%;
+    margin: auto;
     margin-top: 80px;
     background-color: #F7F1CB;
   }
@@ -365,6 +367,8 @@ article a{
 
 /* Shop */
 .shop {
+    max-width:100%;
+    margin: auto;
     margin-top: 80px;
     background-color: #F7F1CB;
     text-align: center;
