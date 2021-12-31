@@ -65,6 +65,7 @@ Auth::routes();
 // CRUD ADMIN
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin-news', [AdminNewsController::class, 'index'])->name('news');
+    Route::get('/admin-addnews', [AdminNewsController::class, 'add'])->name('addnews');
     Route::post('/admin-news/insertnews', [AdminNewsController::class, 'insert']);
     Route::get('/admin-news/editnews/{id_news}', [AdminNewsController::class, 'edit']);
     Route::post('/admin-news/updatenews/{id_news}', [AdminNewsController::class, 'update']);

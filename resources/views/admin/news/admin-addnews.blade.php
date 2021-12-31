@@ -28,38 +28,49 @@
                 <div class="container-fluid mt-5">
                     <div class="card mb-4">
                         <div class="card-header">
-                            <a href="{{ url('/admin/keynote') }}"><button class="btn btn-primary">Back</button></a>
+                            <a href="{{ url('admin-news') }}"><button class="btn btn-primary">Back</button></a>
                         </div>
                         <div class="card-body">
-                            <div class="form-group">
-                                <label for="formGroupExampleInput">Picture</label>
-                                <div class="custom-file">
-                                    <input type="file" name="image" class="custom-file-input" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                            <form action="/admin-news/insertnews" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group mb-2">
+                                    <label class="mb-1" for="inputGambar">Picture</label>
+                                    <div class="custom-file">
+                                        <input type="file" name="gambar_news" class="custom-file-input" id="gambar_news"
+                                            value="">{{ old('gambar_news') }}
+                                    </div>
+                                    <small for="formGroupExampleInput" class="font-weight-bold">Max : 2MB and png or
+                                        jpg</small>
+
                                 </div>
-                                <small for="formGroupExampleInput" class="font-weight-bold">Max : 2MB and png or
-                                    jpg</small>
-
-                            </div>
-                            <div class="form-group">
-                                <label for="formGroupExampleInput">Judul Berita</label>
-                                <input name="name" type="text" class="form-control" id="formGroupExampleInput"
-                                    placeholder="">
-
-                            </div>
-                            <div class="form-group">
-                                <label for="formGroupExampleInput2">Tanggal</label>
-                                <input name="institution" type="text" class="form-control" id="formGroupExampleInput2"
-                                    placeholder="">
-
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Isi</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                            <div class="button-submit">
-                                <button class="btn btn-success">Save</button>
-                            </div>
+                                <div class="form-group mb-2">
+                                    <label class="mb-1" for="judulNewsInput">Judul Berita</label>
+                                    <input name="judul_news" type="text" class="form-control" id="judul_news"
+                                        placeholder="" value="">{{ old('gambar_news') }}
+                                </div>
+                                <div class="form-group mb-2">
+                                    <input name="slug" type="hidden" class="form-control" id="slug" placeholder=""
+                                        value="">{{ old('slug') }}
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label class="mb-1" for="tanggalNewsInput">Tanggal</label>
+                                    <input name="tanggal_news" type="text" class="form-control" id="tanggal_news"
+                                        placeholder="2021-12-01" value="">{{ old('tanggal_news') }}
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label class="mb-1" for="tempatNewsInput">Tempat Berita</label>
+                                    <input name="tempat_news" class="form-control" id="tempat_news" rows="3"
+                                        value="">{{ old('tempat_news') }}</input>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label class="mb-1" for="isiNewsInput">Isi</label>
+                                    <textarea name="isi_news" class="form-control" id="isi_news" rows="3"
+                                        value="">{{ old('isi_news') }}</textarea>
+                                </div>
+                                <div class="button-submit">
+                                    <button type="submit" class="btn btn-success">Save</button>
+                                </div>
+                            </form>
                         </div>
                         </form>
                     </div>

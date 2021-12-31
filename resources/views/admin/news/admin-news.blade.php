@@ -11,6 +11,10 @@
     <link href="{{ asset('assets/css/style-admin.css') }}" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -61,14 +65,22 @@
                     <h1 class="mt-4">Table News</h1>
                     <div class="card mb-4">
                         <div class="card-header">
-                            <a href="{{ url('/admin/keynote/inputKeynoteSpeaker') }}"> <button class="btn btn-primary">Input
+                            <a href="{{ Route('addnews') }}"> <button class="btn btn-primary">Input
                                     News</button></a>
 
                         </div>
                         <div class="card-body">
-
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <div class="box-body table-responsive">
+                                <table id="tbl_news" class="display table table-bordered table-hover">
+                                    <tfoot>
+                                        <tr>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </tfoot>
                                     <thead>
                                         <tr>
                                             <th>Judul</th>
@@ -80,16 +92,19 @@
                                     </thead>
                                     <tbody>
                                         @foreach ($news as $data)
-                                        <tr>
-                                            <td>{{ $data->judul_news }}</td>
-                                            <td><img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="" height="310px" width="288px"></td>
-                                            <td>{{ $data->tanggal_news }}</td>
-                                            <td style="white-space: pre-line">{{ $data->isi_news }}</td>
-                                            <td class="text-center">
-                                                <a href=""><i style="color:#35C668" class="fas fa-edit"></i></a>
-                                                <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10" style="color:#C43030" data-id="" class="fas fa-trash color-danger trash-keynote"></i></a>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td>{{ $data->judul_news }}</td>
+                                                <td><img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt=""
+                                                        height="310px" width="288px"></td>
+                                                <td>{{ $data->tanggal_news }}</td>
+                                                <td style="white-space: pre-line">{{ $data->isi_news }}</td>
+                                                <td class="text-center">
+                                                    <a href=""><i style="color:#35C668" class="fas fa-edit"></i></a>
+                                                    <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10"
+                                                            style="color:#C43030" data-id=""
+                                                            class="fas fa-trash color-danger trash-keynote"></i></a>
+                                                </td>
+                                            </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
@@ -123,6 +138,12 @@
     <script src="assets/demo/chart-area-demo.js"></script>
     <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="assets/demo/chart-pie-demo.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#tbl_news').DataTable();
+        });
+    </script>
 </body>
 
 </html>
