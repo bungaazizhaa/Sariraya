@@ -44,8 +44,8 @@ Route::get('/halal-mart-yonezu', function () {
     return view('mart-yonezu');
 });
 
-Route::get('/halal-mart-tanukui', function () {
-    return view('mart-tanukui');
+Route::get('/halal-mart-tanuki', function () {
+    return view('mart-tanuki');
 });
 
 Route::get('/halal-mart-grosser', function () {

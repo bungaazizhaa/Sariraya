@@ -29,7 +29,7 @@
             <div class="txt">
                 <h1 style="color: aliceblue;">ABOUT US</h1>
             </div>
-            <img src="{{ asset('assets/images/b33.png') }}" alt="" style="width:100%; height:100%;">
+            <img src="{{ asset('assets/images/blur4.jpg') }}" alt="" style="width:100%; height:100%;">
         </div>
     </div>
 
