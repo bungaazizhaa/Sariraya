@@ -45,17 +45,10 @@
                 </div>
                 <div class="col-lg-7">
                     <p>
-                        Sariraya Co., Ltd. Sahabat, inilah awal mula nama Sariraya, dari kegiatan sosial budaya,
-                        olahraga (UNDOKAI) keagamaan, seminar & shimposium pada tahun 2004 di Prefektur Aichi. Mungkin
-                        Sariraya adalah satu-satunya perusahaan Indonesia di Jepang yang didirikan oleh orang Indonesia
-                        (Founder Suyoto Rais, Teguh Wahyudi). Sariraya selalu berusaha untuk berkembang dan berkembang,
-                        dengan manajemen yang profesional.
+                        The only one making tempe in japan with the best material, for the best Indonesian taste.
+                        Sariraya tempe is packed in attractive packaging with orange color, sariraya identity color, with weight of each product 250g. kept in a frozen state to keep the product fresh and durable.
                     </p>
-                    <p>Februari 2005, Nama Resmi Sahabat berubah menjadi Sariraya Yugengaisha & ditawarkan kepada
-                        pecinta pendamping Jepang untuk Indonesia untuk bergabung dalam manajemen Sariraya. Tahun 2006
-                        (Pak Takahito Sato) 2010 Sariraya tumbang, pendirinya mundur dari Sariraya karena kondisi yang
-                        sangat sulit untuk bertahan hidup. (Beberapa pendiri kembali ke Indonesia, yang lain kembali
-                        bekerja).
+                    <p>Making tempe juice made in a factory with a very sophisticated and hygienic concept, and made directly by professionals. to make rasalezat in every grain of tempe.
 
                     </p>
                 </div>
