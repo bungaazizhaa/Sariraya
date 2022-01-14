@@ -32,7 +32,7 @@
                 <br>
                 <h5>For inquiries please follow the instructions below:</h5>
             </div>
-            <img src="{{ asset('assets/images/blur3.jpg') }}" alt="" style="width:100%; height:100%;">
+            <img src="{{ asset('assets/images/foto1.jpg') }}" alt="" style="width:100%; height:100%;">
         </div>
     </div>
 
