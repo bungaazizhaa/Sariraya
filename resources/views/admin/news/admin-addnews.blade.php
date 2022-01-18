@@ -41,12 +41,31 @@
                                     </div>
                                     <small for="formGroupExampleInput" class="font-weight-bold">Max : 2MB and png or
                                         jpg</small>
+                                    <div class="text-danger">
+                                        @error('gambar_news')
+                                            {{ $message }}
+                                        @enderror
+                                    </div>
 
+                                </div>
+                                <div class="form-group mb-2">
+                                    <input name="id_news" type="text" hidden class="form-control" id="id_news"
+                                        placeholder="" value="{{ old('id_news') }}">
+                                    <div class="text-danger">
+                                        @error('id_news')
+                                            {{ $message }}
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="form-group mb-2">
                                     <label class="mb-1" for="judulNewsInput">Judul Berita</label>
                                     <input name="judul_news" type="text" class="form-control" id="judul_news"
-                                        placeholder="" value="">{{ old('gambar_news') }}
+                                        placeholder="" value="{{ old('judul_news') }}">
+                                    <div class="text-danger">
+                                        @error('judul_news')
+                                            {{ $message }}
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="form-group mb-2">
                                     <input name="slug" type="hidden" class="form-control" id="slug" placeholder=""
@@ -54,18 +73,39 @@
                                 </div>
                                 <div class="form-group mb-2">
                                     <label class="mb-1" for="tanggalNewsInput">Tanggal</label>
-                                    <input name="tanggal_news" type="text" class="form-control" id="tanggal_news"
-                                        placeholder="2021-12-01" value="">{{ old('tanggal_news') }}
+                                    <div class="input-group date">
+                                        <input autocomplete="off" name="tanggal_news" type="text"
+                                            class="form-control pull-right" id="datepicker1"
+                                            value="{{ old('tanggal_news') }}">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-danger">
+                                        @error('tanggal_news')
+                                            {{ $message }}
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="form-group mb-2">
                                     <label class="mb-1" for="tempatNewsInput">Tempat Berita</label>
                                     <input name="tempat_news" class="form-control" id="tempat_news" rows="3"
-                                        value="">{{ old('tempat_news') }}</input>
+                                        value="{{ old('tempat_news') }}"></input>
+                                    <div class="text-danger">
+                                        @error('tempat_news')
+                                            {{ $message }}
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="form-group mb-2">
                                     <label class="mb-1" for="isiNewsInput">Isi</label>
                                     <textarea name="isi_news" class="form-control" id="isi_news" rows="3"
                                         value="">{{ old('isi_news') }}</textarea>
+                                    <div class="text-danger">
+                                        @error('isi_news')
+                                            {{ $message }}
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="button-submit">
                                     <button type="submit" class="btn btn-success">Save</button>
@@ -93,13 +133,17 @@
         </footer>
     </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/chart-area-demo.js"></script>
     <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="assets/demo/chart-pie-demo.js"></script>
+    <script>
+        $('.datepicker1').datepicker({
+            format: 'mm/dd/yyyy',
+            startDate: '-3d'
+        });
+    </script>
 </body>
 
 </html>

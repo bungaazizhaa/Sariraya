@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 
 use App\Models\NewsModel;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class AdminNewsController extends Controller
 {
@@ -27,15 +29,7 @@ class AdminNewsController extends Controller
 
     public function add()
     {
-        $data = [
-            // 'merk' => $this->HardwareModel->allMerk(),
-            // 'kategori' => $this->HardwareModel->allKategori(),
-            // 'kondisi' => $this->HardwareModel->allKondisi(),
-            // 'lokasi' => $this->HardwareModel->allLokasi(),
-            // 'departemen' => $this->HardwareModel->allDepartemen(),
-            // 'staff' => $this->HardwareModel->allstaff()
-        ];
-        return view('admin.news.admin-addnews', $data);
+        return view('admin.news.admin-addnews');
     }
 
     public function insert()
@@ -45,23 +39,95 @@ class AdminNewsController extends Controller
             'tanggal_news' => 'required',
             'tempat_news' => 'required',
             'isi_news' => 'required',
+            'gambar_news' => 'required|mimes:jpg,jpeg,png|max:2048',
         ], [
-            'judul_news.required' => 'Judul wajib diisi',
-            'tanggal_news.required' => 'Tanggal wajib diisi',
-            'tempat_news.required' => 'Tempat Hardware wajib diisi',
-            'isi_news.required' => 'Isi Berita wajib diisi',
+            'judul_news.required' => 'Judul wajib diisi.',
+            'tanggal_news.required' => 'Tanggal wajib diisi.',
+            'tempat_news.required' => 'Tempat news wajib diisi.',
+            'isi_news.required' => 'Isi Berita wajib diisi.',
+            'gambar_news.required' => 'Gambar Berita wajib diisi.',
+            'gambar_news.mimes' => 'Gambar harus berformat JPG, JPEG, atau PNG.',
+            'gambar_news.max' => 'Ukuran File Maksimal adalah 2MB.',
         ]);
 
+        $file = Request()->gambar_news;
+        $fileName = 'imgNews-' . time() . '.' . $file->extension();
+        $file->move(public_path('gambar_news'), $fileName);
+
         $data = [
+            'id_news' => Request()->id_news,
             'judul_news' => Request()->judul_news,
             'slug' => Request()->slug,
             'tanggal_news' => Request()->tanggal_news,
             'tempat_news' => Request()->tempat_news,
-            'gambar_news' => Request()->gambar_news,
+            'gambar_news' =>  $fileName,
             'isi_news' => Request()->isi_news,
         ];
 
         $this->NewsModel->addData($data);
         return redirect()->route('news')->with('pesan', 'Data berhasil ditambahkan.');
+    }
+
+    public function edit($id_news)
+    {
+        if (!$this->NewsModel->detailData($id_news)) {
+            abort(404);
+        }
+
+        $data = [
+            'news' => $this->NewsModel->detailData($id_news),
+        ];
+        return view('admin.news.admin-editnews', $data);
+    }
+    public function update($id_news)
+    {
+        Request()->validate([
+            'judul_news' => 'required',
+            'tanggal_news' => 'required',
+            'tempat_news' => 'required',
+            'isi_news' => 'required',
+            'gambar_news' => 'mimes:jpg,jpeg,png|max:2048',
+        ], [
+            'judul_news.required' => 'Judul wajib diisi.',
+            'tanggal_news.required' => 'Tanggal wajib diisi.',
+            'tempat_news.required' => 'Tempat news wajib diisi.',
+            'isi_news.required' => 'Isi Berita wajib diisi.',
+            'gambar_news.required' => 'Gambar Berita wajib diisi.',
+            'gambar_news.mimes' => 'Gambar harus berformat JPG, JPEG, atau PNG.',
+            'gambar_news.max' => 'Ukuran File Maksimal adalah 2MB.',
+        ]);
+
+
+        if (request()->gambar_news <> "") {
+            $file = Request()->gambar_news;
+            $fileName = Request()->id_news . '.' . $file->extension();
+            $file->move(public_path('gambar_news'), $fileName);
+
+            $data = [
+                'id_news' => Request()->id_news,
+                'judul_news' => Request()->judul_news,
+                'slug' => Request()->slug,
+                'tanggal_news' => Request()->tanggal_news,
+                'tempat_news' => Request()->tempat_news,
+                'gambar_news' =>  $fileName,
+                'isi_news' => Request()->isi_news,
+            ];
+        } else {
+            $data = [
+                'judul_news' => Request()->judul_news,
+                'slug' => Request()->slug,
+                'tanggal_news' => Request()->tanggal_news,
+                'tempat_news' => Request()->tempat_news,
+                'isi_news' => Request()->isi_news,
+            ];
+        }
+
+        $this->NewsModel->editData($id_news, $data);
+        return redirect()->route('news')->with('pesan', 'Data berhasil di Ubah.');
+    }
+
+    public function delete($id_news)
+    {
+        return DB::table('tbl_news')->where('id_news', $id_news)->delete();
     }
 }

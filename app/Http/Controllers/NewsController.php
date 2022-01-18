@@ -15,6 +15,9 @@ class NewsController extends Controller
 
     public function detail($id_news)
     {
+        if (!$this->NewsModel->detailData($id_news)) {
+            abort(404);
+        }
         $data = [
             'news' => $this->NewsModel->detailData($id_news)
         ];

@@ -8,6 +8,8 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>News - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="{{ asset('assets/css/style-admin.css') }}" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
@@ -23,6 +25,14 @@
         <main>
             <div class="container-fluid px-4">
                 <h1 class="mt-4">News</h1>
+                {{-- @if (session('pesan')) --}}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Berhasil !</strong> {{ session('pesan') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {{-- @endif --}}
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                     <li class="breadcrumb-item active">News</li>
@@ -79,14 +89,16 @@
                                             <th></th>
                                             <th></th>
                                             <th></th>
+                                            <th></th>
                                         </tr>
                                     </tfoot>
                                     <thead>
                                         <tr>
                                             <th>Judul</th>
                                             <th>Picture</th>
-                                            <th>Tanggal</th>
+                                            <th>Tgl Berita</th>
                                             <th>Isi</th>
+                                            <th>Tgl di Input</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -95,11 +107,13 @@
                                             <tr>
                                                 <td>{{ $data->judul_news }}</td>
                                                 <td><img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt=""
-                                                        height="310px" width="288px"></td>
+                                                        width="300px"></td>
                                                 <td>{{ $data->tanggal_news }}</td>
                                                 <td style="white-space: pre-line">{{ $data->isi_news }}</td>
+                                                <td>{{ $data->created_at }}</td>
                                                 <td class="text-center">
-                                                    <a href=""><i style="color:#35C668" class="fas fa-edit"></i></a>
+                                                    <a href="/admin-news/editnews/{{ $data->id_news }}" id=""><i
+                                                            style="color:#35C668" class="fas fa-edit"></i></a>
                                                     <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10"
                                                             style="color:#C43030" data-id=""
                                                             class="fas fa-trash color-danger trash-keynote"></i></a>
