@@ -116,7 +116,7 @@
     <div class="container">
         <div class="row my-3 mt-lg-5 mx-lg-5 mx-sm-2 my-sm-2">
             @foreach ($home as $data)
-                <div class="col-md-4 mt-3">
+                <div class="col-sm-4 mt-3">
                     <div class="card mycard">
                         <img class="card-img-top" src="{{ url('gambar_news/' . $data->gambar_news) }}"
                             alt="Card image cap">
@@ -136,29 +136,6 @@
             <a href="/news" class="btn lihat">Lihat Semua Berita...</a>
         </div>
     </div>
-    <!-- Section News -->
-    {{-- <div class="container">
-        <div class="news">
-            <h1>GOOD NEWS</h1>
-            <h4>Here’s the latest news from us to you</h4>
-            <div class="grid " style="width: 50vw;">
-                @foreach ($home as $data)
-                    <article>
-                        <img style="width:100%;" src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
-                        <div class="text">
-                            <p style="height:50px;">{{ $data->judul_news }}<br></p>
-                            <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View More</a>
-                        </div>
-                    </article>
-                @endforeach
-                <article>
-                    <div class="text">
-                        <a href="/news" class="btn">Lihat Selengkapnya...</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div> --}}
     <!-- Akhir Section News -->
 
     <!-- Section Online Shop  -->
