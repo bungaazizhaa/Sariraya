@@ -2,13 +2,15 @@
 @if (auth()->user() == true)
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="/">Admin is Logged In</a>
+        <a class="text-left text-light ps-3" href="/">Admin is Logged In</a>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class=" btn bg-light text-dark ps-3" href="/dashboard">Dashboard Admin</a></li>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
-                @csrf
-                <button type="submit" class="btn bg-danger text-light" href="{{ route('logout') }}">Logout</button>
-            </form>
+            <li class="nav-item"><a class=" btn bg-light text-dark ps-3" href="/dashboard">Dashboard</a></li>
+            <li class="nav-item">
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn bg-danger text-light" href="{{ route('logout') }}">Logout</button>
+                </form>
+            </li>
         </ul>
     </nav>
 @endif
