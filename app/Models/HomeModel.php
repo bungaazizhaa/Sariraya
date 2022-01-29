@@ -11,6 +11,6 @@ class HomeModel extends Model
     use HasFactory;
     public function allData()
     {
-        return DB::table('tbl_news')->latest('tanggal_news')->take(5)->get();
+        return DB::table('tbl_news')->latest('tanggal_news')->take(3)->get();
     }
 }

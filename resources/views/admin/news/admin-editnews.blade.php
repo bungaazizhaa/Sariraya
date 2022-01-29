@@ -9,7 +9,12 @@
     <meta name="author" content="" />
     <title>Edit News - Admin</title>
     <link href="{{ asset('assets/css/style-admin.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -41,7 +46,7 @@
                                             width="300px">
                                     </div>
                                     <div class="custom-file">
-                                        <input type="file" name="gambar_news" class="custom-file-input" id="gambar_news"
+                                        <input type="file" name="gambar_news" id="gambar_news"
                                             value="{{ $news->gambar_news }}">{{ old('gambar_news') }}
                                     </div>
                                     <small for="formGroupExampleInput" class="font-weight-bold">Max : 2MB and png or
@@ -95,7 +100,7 @@
                                 <div class="form-group mb-2">
                                     <label class="mb-1" for="tempatNewsInput">Tempat Berita</label>
                                     <input name="tempat_news" class="form-control" id="tempat_news"
-                                        value="{{ $news->tempat_news }}"></input>
+                                        value="{{ $news->tempat_news }}">
                                     <div class="text-danger">
                                         @error('tempat_news')
                                             {{ $message }}
@@ -104,7 +109,7 @@
                                 </div>
                                 <div class="form-group mb-2">
                                     <label class="mb-1" for="isiNewsInput">Isi</label>
-                                    <textarea name="isi_news" class="form-control" id="isi_news"
+                                    <textarea id="summernote" name="isi_news" class="form-control" id="isi_news"
                                         rows="3">{{ $news->isi_news }}</textarea>
                                     <div class="text-danger">
                                         @error('isi_news')
@@ -138,13 +143,28 @@
         </footer>
     </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
-    <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="assets/demo/chart-pie-demo.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#summernote').summernote({
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'underline', 'italic', 'clear']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['table', ['table']],
+                    ['insert', ['link', 'picture', 'video']],
+                    ['view', ['fullscreen', 'codeview', 'help']]
+                ]
+            });
+        });
+    </script>
 </body>
 
 </html>

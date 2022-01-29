@@ -128,6 +128,7 @@ class AdminNewsController extends Controller
 
     public function delete($id_news)
     {
-        return DB::table('tbl_news')->where('id_news', $id_news)->delete();
+        $this->NewsModel->deleteData($id_news);
+        return redirect()->route('news')->with('pesan', 'Data berhasil dihapus.');
     }
 }

@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <title>Sariraya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ asset('assets/css/jsfile.js') }}"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -21,16 +21,18 @@
 </head>
 
 <body>
+
     @include('layouts.navbar')
 
     <!-- Slider -->
-    <div class="slider">
-        <div class="myslider " style="display: block;">
-            <div class="txt">
-                <h1 style="color: aliceblue;">Sariraya.Co.Ltd.</h1>
-                <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
+    <div class="slider" style="width:100%;">
+        <div class="myslider" style="display: block; ">
+            <div class="txt ml-n3">
+                <h1 style="font-size:5.2vw; margin-bottom:1vw; color: aliceblue;">
+                    Sariraya.Co.Ltd.</h1>
+                <p style="font-size:2.2vw; margin-top:0.125vw;">Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
             </div>
-            <img src="{{ asset('assets/images/foto1.jpg') }}" alt="" style="width:100%; height:100%;">
+            <img src="{{ asset('assets/images/foto1.jpg') }}" style=" width:100%;" alt="">
         </div>
 
         <!--
@@ -65,38 +67,36 @@
 
     <!-- Section Product -->
     <div class="container">
-        <div class="produk">
-            <h1>Let’s see our products</h1>
-
-            <div class="grid">
-                <article>
-                    <img style="width:100%;" src="{{ asset('assets/images/a3.png') }}" alt="">
-                    <div class="text">
-                        <h3>Tempe Factory</h3>
-                        <a href=""> know more -> </a>
+        <div class="row my-lg-5 mx-lg-5 mx-sm-2 my-sm-2">
+            <div class="col-sm-4 mt-3">
+                <div class="card mycard text-center">
+                    <img class="card-img-top" src="{{ asset('assets/images/a1.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Tempe Factory</h5>
+                        <a class="card-text" href=""> know more -> </a>
                     </div>
-                </article>
-
-                <article>
-                    <img style="width:100%;" src="{{ asset('assets/images/a2.png') }}" alt="">
-                    <div class="text">
-                        <h3>Online Shop</h3>
-                        <a href=""> know more -> </a>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-3">
+                <div class="card mycard text-center">
+                    <img class="card-img-top" src="{{ asset('assets/images/a2.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Online Shop</h5>
+                        <a class="card-text" href=""> know more -> </a>
                     </div>
-                </article>
-
-                <article>
-                    <img style="width:100%;" src="{{ asset('assets/images/a1.png') }}" alt="">
-                    <div class="text">
-                        <h3>Halal Fried Chiken</h3>
-                        <a href=""> know more -> </a>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-3">
+                <div class="card mycard text-center">
+                    <img class="card-img-top" src="{{ asset('assets/images/a3.png') }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Halal Fried Chiken</h5>
+                        <a class="card-text" href=""> know more -> </a>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
-
     </div>
-
     <!-- Akhir Section Product -->
 
 
@@ -104,7 +104,8 @@
     <div class="row katalog">
         <div class="col-lg teksdonlot">
             <p>DOWNLOAD SARIRAYA <br> CATALOGUE HERE!</p>
-            <a href="https://drive.google.com/file/d/1RFcPb3Jz-w5jTfxX5NYBNKrTwg3ZfhA6/view" class="btn donlot">DOWNLOAD</a>
+            <a href="https://drive.google.com/file/d/1RFcPb3Jz-w5jTfxX5NYBNKrTwg3ZfhA6/view"
+                class="btn donlot">DOWNLOAD</a>
         </div>
         <div class="col-lg-6">
             <img src="{{ asset('assets/images/katalog.png') }}" alt="" class="img-fluid" />
@@ -112,20 +113,43 @@
     </div>
     <!-- Akhir Section Katalog -->
 
-    <!-- Section News -->
     <div class="container">
+        <div class="row my-3 mt-lg-5 mx-lg-5 mx-sm-2 my-sm-2">
+            @foreach ($home as $data)
+                <div class="col-md-4 mt-3">
+                    <div class="card mycard">
+                        <img class="card-img-top" src="{{ url('gambar_news/' . $data->gambar_news) }}"
+                            alt="Card image cap">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ $data->judul_news }}</h5>
+                            {{-- <p class="card-text">{{ Str::limit($data->isi_news, 50) }}</p> --}}
+                            <p class="card-text"><small class="text-muted">{{ $data->tanggal_news }}</small>
+                            </p>
+                            <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View
+                                More</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <div class="text text-center mt-md-1 mt-2">
+            <a href="/news" class="btn lihat">Lihat Semua Berita...</a>
+        </div>
+    </div>
+    <!-- Section News -->
+    {{-- <div class="container">
         <div class="news">
             <h1>GOOD NEWS</h1>
             <h4>Here’s the latest news from us to you</h4>
-            <div class="grid">
+            <div class="grid " style="width: 50vw;">
                 @foreach ($home as $data)
-                <article>
-                    <img style="width:100%;" src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
-                    <div class="text">
-                        <p style="height:50px;">{{ $data->judul_news }}<br></p>
-                        <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View More</a>
-                    </div>
-                </article>
+                    <article>
+                        <img style="width:100%;" src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="">
+                        <div class="text">
+                            <p style="height:50px;">{{ $data->judul_news }}<br></p>
+                            <a href="{{ url('news/detail/' . $data->id_news) }}" class="btn lihat">View More</a>
+                        </div>
+                    </article>
                 @endforeach
                 <article>
                     <div class="text">
@@ -134,7 +158,7 @@
                 </article>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Akhir Section News -->
 
     <!-- Section Online Shop  -->
@@ -152,7 +176,7 @@
 
     </div>
     <div class="shop1">
-        <img src="{{ asset('assets/images/sh.jpg') }}" alt="">
+        <img class="" src="{{ asset('assets/images/sh.jpg') }}" width="93%" alt="">
     </div>
 
     <!-- Akhir Section Online Shop -->
