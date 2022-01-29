@@ -51,19 +51,16 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="checkbox" name="remember"
-                                                id="remember" {{ old('remember') ? 'checked' : '' }} />
-                                            <label class="form-check-label" for="inputRememberPassword">Remember
-                                                Password</label>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between mt-1 mb-0">
-                                            <button type="submit" class="btn btn-primary">{{ __('Login') }}</button>
-
+                                        <div class="mt-2 mb-0">
+                                            <button type="submit" class="btn btn-lg btn-primary d-flex mx-auto"
+                                                href="/admin-dashboard">{{ __('Login') }}
+                                            </button>
                                             @if (Route::has('password.request'))
-                                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                    {{ __('Forgot Your Password?') }}
-                                                </a>
+                                                <div>
+                                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                        {{ __('Forgot Your Password?') }}
+                                                    </a>
+                                                </div>
                                             @endif
                                         </div>
                                     </form>

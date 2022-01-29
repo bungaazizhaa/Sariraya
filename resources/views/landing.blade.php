@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Sariraya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="{{ asset('assets/css/jsfile.js') }}"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/images') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
-
-</head>
-
-<body>
-
-    @include('layouts.navbar')
-
+@extends('layouts.home-template')
+@section('content')
     <!-- Slider -->
     <div class="slider" style="width:100%;">
         <div class="myslider" style="display: block; ">
@@ -36,30 +12,30 @@
         </div>
 
         <!--
-    <div class="myslider fade">
-      <div class="txt">
-        <h1>Gambar 2</h1>
-        <p>deskripsi</p>
-      </div>
-      <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
-    </div>
-    <div class="myslider fade">
-      <div class="txt">
-        <h1>Gambar 3</h1>
-        <p>deskripsi</p>
-      </div>
-      <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
-    </div>
+                    <div class="myslider fade">
+                      <div class="txt">
+                        <h1>Gambar 2</h1>
+                        <p>deskripsi</p>
+                      </div>
+                      <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
+                    </div>
+                    <div class="myslider fade">
+                      <div class="txt">
+                        <h1>Gambar 3</h1>
+                        <p>deskripsi</p>
+                      </div>
+                      <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
+                    </div>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    
-    <div class="dotsbox" style="text-align: center;">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-  </div>-->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    <div class="dotsbox" style="text-align: center;">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                  </div>-->
 
     </div>
 
@@ -157,5 +133,4 @@
     </div>
 
     <!-- Akhir Section Online Shop -->
-
-    @include('layouts.footer')
+@endsection

@@ -1,28 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="{{ asset('assets/css/jsfile.js') }}"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/images') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
-
-</head>
-
-<body>
-    @include('layouts.navbar')
-
+@extends('layouts.home-template')
+@section('content')
     <!-- Slider -->
     <div class="slider-kontak">
         <div class="myslider-kontak " style="display: block;">
@@ -54,23 +31,28 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Company</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">State</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Telephone Number</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Message</label>
@@ -95,23 +77,28 @@
                             <form>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Email</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Company</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">State</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Telephone Number</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="" />
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="" />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Message</label>
@@ -144,5 +131,4 @@
         </div>
     </div>
     <!-- Akhir Form -->
-
-    @include('layouts.footer')
+@endsection

@@ -52,13 +52,9 @@ Route::get('/halal-mart-grosser', function () {
     return view('mart-grosser');
 });
 
-Route::get('/login', function () {
-    return view('admin-login');
-});
-
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/admin-contact', function () {
-    return view('admin-contact');
+    return view('admin.contact.admin-contact');
 });
 Auth::routes();
 
