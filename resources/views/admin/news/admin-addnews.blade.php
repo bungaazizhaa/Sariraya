@@ -56,11 +56,11 @@
                 </div>
                 <div class="form-group mb-2">
                     <label class="mb-1" for="tanggalNewsInput">Tanggal</label>
-                    <div class="input-group date">
-                        <input autocomplete="off" name="tanggal_news" type="text" class="form-control pull-right"
-                            id="datepicker1" value="{{ old('tanggal_news') }}">
-                        <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
+                    <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                        <input type="text" value="{{ old('tanggal_news') }}" name="tanggal_news"
+                            class="form-control pull-right datetimepicker-input" data-target="#datetimepicker1" />
+                        <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
                     </div>
                     <div class="text-danger">
@@ -72,7 +72,7 @@
                 <div class="form-group mb-2">
                     <label class="mb-1" for="tempatNewsInput">Tempat Berita</label>
                     <input name="tempat_news" class="form-control" id="tempat_news" rows="3"
-                        value="{{ old('tempat_news') }}"></input>
+                        value="{{ old('tempat_news') }}">
                     <div class="text-danger">
                         @error('tempat_news')
                             {{ $message }}
@@ -94,7 +94,6 @@
                 </div>
             </form>
         </div>
-        </form>
     </div>
 
     {{-- Script Only For This Page --}}
@@ -110,6 +109,13 @@
                     ['insert', ['link', 'picture', 'video']],
                     ['view', ['fullscreen', 'codeview', 'help']]
                 ]
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('#datetimepicker1').datetimepicker({
+                format: 'YYYY/MM/DD'
             });
         });
     </script>

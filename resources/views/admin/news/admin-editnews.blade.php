@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group mb-2">
                         <input name="id_news" type="text" hidden class="form-control" id="id_news" placeholder=""
-                            value="{{ $news->id_news }}">
+                            value="{{ old('id_news', $news->id_news) }}">
                         <div class="text-danger">
                             @error('id_news')
                                 {{ $message }}
@@ -47,7 +47,7 @@
                     <div class="form-group mb-2">
                         <label class="mb-1" for="judulNewsInput">Judul Berita</label>
                         <input name="judul_news" type="text" class="form-control" id="judul_news" placeholder=""
-                            value="{{ $news->judul_news }}">
+                            value="{{ old('judul_news', $news->judul_news) }}">
                         <div class="text-danger">
                             @error('judul_news')
                                 {{ $message }}
@@ -60,11 +60,11 @@
                     </div>
                     <div class="form-group mb-2">
                         <label class="mb-1" for="tanggalNewsInput">Tanggal</label>
-                        <div class="input-group date">
-                            <input autocomplete="off" name="tanggal_news" type="text" class="form-control pull-right"
-                                id="datepicker1" value="{{ $news->tanggal_news }}">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
+                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                            <input type="text" value="{{ old('tanggal_news', $news->tanggal_news) }}" name="tanggal_news"
+                                class="form-control pull-right datetimepicker-input" data-target="#datetimepicker1" />
+                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                             </div>
                         </div>
                         <div class="text-danger">
@@ -76,7 +76,7 @@
                     <div class="form-group mb-2">
                         <label class="mb-1" for="tempatNewsInput">Tempat Berita</label>
                         <input name="tempat_news" class="form-control" id="tempat_news"
-                            value="{{ $news->tempat_news }}">
+                            value="{{ old('tempat_news', $news->tempat_news) }}">
                         <div class="text-danger">
                             @error('tempat_news')
                                 {{ $message }}
@@ -86,7 +86,7 @@
                     <div class="form-group mb-2">
                         <label class="mb-1" for="isiNewsInput">Isi</label>
                         <textarea id="summernote" name="isi_news" class="form-control" id="isi_news"
-                            rows="3">{{ $news->isi_news }}</textarea>
+                            rows="3">{{ old('isi_news', $news->isi_news) }}</textarea>
                         <div class="text-danger">
                             @error('isi_news')
                                 {{ $message }}
@@ -116,6 +116,13 @@
                     ['insert', ['link', 'picture', 'video']],
                     ['view', ['fullscreen', 'codeview', 'help']]
                 ]
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('#datetimepicker1').datetimepicker({
+                format: 'YYYY/MM/DD'
             });
         });
     </script>

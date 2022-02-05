@@ -20,6 +20,7 @@ class AdminNewsController extends Controller
 
     public function index()
     {
+
         $data = [
             'news' => $this->NewsModel->allData()
         ];
@@ -99,8 +100,16 @@ class AdminNewsController extends Controller
 
 
         if (request()->gambar_news <> "") {
+            $path = 'gambar_news/';
+            $users = DB::table('tbl_news')
+                ->where('id_news', '=', $id_news)
+                ->first();
+            $userInfo =  $users->gambar_news;
+            if ($userInfo != '') {
+                unlink($path . $userInfo);
+            }
             $file = Request()->gambar_news;
-            $fileName = Request()->id_news . '.' . $file->extension();
+            $fileName = 'imgNews-' . time() . '.' . $file->extension();
             $file->move(public_path('gambar_news'), $fileName);
 
             $data = [
@@ -128,6 +137,14 @@ class AdminNewsController extends Controller
 
     public function delete($id_news)
     {
+        $path = 'gambar_news/';
+        $users = DB::table('tbl_news')
+            ->where('id_news', '=', $id_news)
+            ->first();
+        $userInfo =  $users->gambar_news;
+        if ($userInfo != '') {
+            unlink($path . $userInfo);
+        }
         $this->NewsModel->deleteData($id_news);
         return redirect()->route('news')->with('pesan', 'Data berhasil dihapus.');
     }

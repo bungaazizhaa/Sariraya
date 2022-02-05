@@ -13,32 +13,45 @@
         <div class="card mb-4">
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table id="tbl_contact" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
+                                <th>No</th>
+                                <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Message</th>
                                 <th>Company</th>
                                 <th>State</th>
                                 <th>Telephone Number</th>
-                                <th>Message</th>
+                                <th>Created At</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>tes</td>
-                                <td>tes</td>
-                                <td>tes</td>
-                                <td>tes</td>
-                                <td>tes</td>
-                                <td style="white-space: pre-line">tes</td>
-                                <td class="text-center">
-                                    <a href=""><i style="color:#35C668" class="fas fa-edit"></i></a>
-                                    <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10" style="color:#C43030"
-                                            data-id="" class="fas fa-trash color-danger trash-keynote"></i></a>
-                                </td>
-                            </tr>
+                            @php
+                                $no = 1;
+                            @endphp
+                            @foreach ($contact as $data)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>{{ $data->id_contact }}</td>
+                                    <td>{{ $data->name }}</td>
+                                    <td>
+                                        <a href="mailto:{{ $data->email }}">{{ $data->email }}</a>
+                                    </td>
+                                    <td>{{ $data->message }}</td>
+                                    <td>{{ $data->company }}</td>
+                                    <td>{{ $data->state }}</td>
+                                    <td>{{ $data->telephone }}</td>
+                                    <td>{{ $data->created_at }}</td>
+                                    <td class="text-center">
+                                        <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10"
+                                                style="color:#C43030" data-id=""
+                                                class="fas fa-trash color-danger trash-keynote"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -47,4 +60,10 @@
     </div>
 
     <!-- Akhir Isi From Information -->
+
+    <script>
+        $(function() {
+            $("#tbl_contact").DataTable({});
+        });
+    </script>
 @endsection

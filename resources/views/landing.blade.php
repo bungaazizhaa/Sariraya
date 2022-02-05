@@ -12,30 +12,30 @@
         </div>
 
         <!--
-                    <div class="myslider fade">
-                      <div class="txt">
-                        <h1>Gambar 2</h1>
-                        <p>deskripsi</p>
-                      </div>
-                      <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
-                    </div>
-                    <div class="myslider fade">
-                      <div class="txt">
-                        <h1>Gambar 3</h1>
-                        <p>deskripsi</p>
-                      </div>
-                      <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
-                    </div>
+                                                                            <div class="myslider fade">
+                                                                              <div class="txt">
+                                                                                <h1>Gambar 2</h1>
+                                                                                <p>deskripsi</p>
+                                                                              </div>
+                                                                              <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
+                                                                            </div>
+                                                                            <div class="myslider fade">
+                                                                              <div class="txt">
+                                                                                <h1>Gambar 3</h1>
+                                                                                <p>deskripsi</p>
+                                                                              </div>
+                                                                              <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
+                                                                            </div>
 
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    
-                    <div class="dotsbox" style="text-align: center;">
-                      <span class="dot" onclick="currentSlide(1)"></span>
-                      <span class="dot" onclick="currentSlide(2)"></span>
-                      <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                  </div>-->
+                                                                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                                                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                                                            
+                                                                            <div class="dotsbox" style="text-align: center;">
+                                                                              <span class="dot" onclick="currentSlide(1)"></span>
+                                                                              <span class="dot" onclick="currentSlide(2)"></span>
+                                                                              <span class="dot" onclick="currentSlide(3)"></span>
+                                                                            </div>
+                                                                          </div>-->
 
     </div>
 
@@ -43,10 +43,11 @@
 
     <!-- Section Product -->
     <div class="container">
-        <div class="row my-lg-5 mx-lg-5 mx-sm-2 my-sm-2">
+        <h2 class="text-center mt-5 mb-0">Our Products</h2>
+        <div class="row mb-lg-2 mb-lg-5 mx-lg-5 mx-sm-2 my-sm-2">
             <div class="col-sm-4 mt-3">
                 <div class="card mycard text-center">
-                    <img class="card-img-top" src="{{ asset('assets/images/a1.png') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('assets/images/a3.png') }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Tempe Factory</h5>
                         <a class="card-text" href=""> know more -> </a>
@@ -64,7 +65,7 @@
             </div>
             <div class="col-sm-4 mt-3">
                 <div class="card mycard text-center">
-                    <img class="card-img-top" src="{{ asset('assets/images/a3.png') }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ asset('assets/images/a1.png') }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Halal Fried Chiken</h5>
                         <a class="card-text" href=""> know more -> </a>
@@ -90,7 +91,8 @@
     <!-- Akhir Section Katalog -->
 
     <div class="container">
-        <div class="row my-3 mt-lg-5 mx-lg-5 mx-sm-2 my-sm-2">
+        <h2 class="text-center mt-5 mb-0">Good News</h2>
+        <div class="row mb-3 mt-lg-4 mx-lg-5 mx-sm-2 my-sm-1">
             @foreach ($home as $data)
                 <div class="col-sm-4 mt-3">
                     <div class="card mycard">

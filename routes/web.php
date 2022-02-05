@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AdminNewsController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AdminContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ Route::get('/news/detail/{id_news}', [NewsController::class, 'detail']);
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 
 Route::get('/tempe-factory', function () {
     return view('factory-tempe');
@@ -53,10 +54,10 @@ Route::get('/halal-mart-grosser', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/admin-contact', function () {
-    return view('admin.contact.admin-contact');
-});
+
 Auth::routes();
+Route::get('/admin-contact', [AdminContactController::class, 'index'])->name('contact.index');
+Route::post('/contact/insertcontact', [AdminContactController::class, 'insert'])->name('addcontact');
 
 // CRUD ADMIN
 Route::middleware(['auth'])->group(function () {

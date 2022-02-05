@@ -769,36 +769,34 @@ article a{
 
 /* Kontak */
 
-.kontak {
-    margin-top: 50px;
-}
+/* .kontak { */
+    /* margin-top: 50px; */
+/* } */
 
 .row-kontak {
     display: flex;
 }
 
 .kontak-box {
-    width: 600px;
     background-color: #EBEBEB;
     box-shadow: 0 0 20px 0 #999;
-    position: absolute;
     border-radius: 30px;
 }
 
-.kontak-box form{
+/* .kontak-box form{
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
-}
+} */
 
 .kontak-box .form-control {
     border-radius: 10px;
 }
 
 .row-kontak .kepada {
-    margin-top: 50%;
-    margin-left: 10%;
+    /* margin-top: 50%; */
+    /* margin-left: 10%; */
 }
 
 .row-kontak h2{
@@ -806,12 +804,12 @@ article a{
 }
 
 .indo {
-    margin-top: 30%;
+    /* margin-top: 30%; */
 }
 
 .info {
-    margin-top: 30%;
-    padding-bottom: 50px;
+    /* margin-top: 30%; */
+    /* padding-bottom: 50px; */
 }
 
 .info table {

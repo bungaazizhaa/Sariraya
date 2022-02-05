@@ -22,6 +22,8 @@
                 <table id="tbl_news" class="display table table-bordered table-hover">
                     <thead>
                         <tr>
+                            <th>No</th>
+                            <th>ID</th>
                             <th>Judul</th>
                             <th>Picture</th>
                             <th>Tgl Berita</th>
@@ -31,8 +33,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php
+                            $no = 1;
+                        @endphp
                         @foreach ($news as $data)
                             <tr>
+                                <td>{{ $no++ }}</td>
+                                <td>{{ $data->id_news }}</td>
                                 <td>{{ $data->judul_news }}</td>
                                 <td><img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="" width="230px">
                                 </td>
@@ -98,4 +105,10 @@
             </div>
         </div>
     @endforeach
+
+    <script>
+        $(function() {
+            $("#tbl_news").DataTable({});
+        });
+    </script>
 @endsection
