@@ -56,7 +56,7 @@ Route::get('/halal-mart-grosser', function () {
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Auth::routes();
-Route::get('/admin-contact', [AdminContactController::class, 'index'])->name('contact');
+Route::get('/admin-contact', [AdminContactController::class, 'index'])->name('contact.index');
 Route::post('/contact/insertcontact', [AdminContactController::class, 'insert'])->name('addcontact');
 
 // CRUD ADMIN
