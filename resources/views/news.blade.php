@@ -6,7 +6,7 @@
         <div class="news">
             <div class="banner-news">
                 <h3 class="text-white">{{ $data->judul_news }}</h3>
-                <p class="text-white">{{ date('M-d-Y', strtotime($data->tanggal_news)) }} - {{ $data->tempat_news }}
+                <p class="text-white">{{ date('M. d Y', strtotime($data->tanggal_news)) }} - {{ $data->tempat_news }}
                 </p>
             </div>
             <div class="container">

@@ -31,7 +31,7 @@
             <div class="japan my-3 my-md-5 ">
                 <div class="row row-kontak">
                     <div class="col-12 col-md-6 text-md-left text-center d-flex my-auto">
-                        <div class="kepada ml-md-5">
+                        <div class="kepada ml-md-5 mx-auto">
                             <h2>For Further Information</h2>
                             <p>Japanese People</p>
                         </div>
@@ -39,7 +39,6 @@
                     <div class="col-12 col-md-6">
                         <div class="card kontak-box">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
                                 <form action="/contact/insertcontact" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">
@@ -84,7 +83,7 @@
             <div class="indo my-4">
                 <div class="row row-kontak mb-4">
                     <div class="col-12 col-md-6  text-md-left text-center d-flex my-auto">
-                        <div class="kepada ml-md-5">
+                        <div class="kepada ml-md-5 mx-auto">
                             <h2>For Further Information</h2>
                             <p>Indonesian People</p>
                         </div>
@@ -92,7 +91,6 @@
                     <div class="col-12 col-md-6">
                         <div class="card kontak-box">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
                                 <form action="/contact/insertcontact" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group">

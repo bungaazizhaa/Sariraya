@@ -668,6 +668,7 @@ article a{
 
 .timeline ul {
     list-style: none;
+    margin-left: -40px;
 }
 
 .timeline ul li {

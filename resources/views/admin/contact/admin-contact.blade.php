@@ -38,7 +38,9 @@
                                     <td>{{ $data->id_contact }}</td>
                                     <td>{{ $data->name }}</td>
                                     <td>
-                                        <a href="mailto:{{ $data->email }}">{{ $data->email }}</a>
+                                        <a
+                                            href="mailto:{{ $data->email }}?subject=Email Reply from Sariraya regarding your message.&body=Your Message: {{ $data->message }}%0D%0AAt {{ $data->created_at }}%0D%0A">{{ $data->email }}</a>
+                                        {{-- <a href="mailto:{{ $data->email }}">{{ $data->email }}</a> --}}
                                     </td>
                                     <td>{{ $data->message }}</td>
                                     <td>{{ $data->company }}</td>
