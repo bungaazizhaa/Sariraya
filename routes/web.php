@@ -30,29 +30,29 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/tempe-factory', function () {
+Route::get('factory/tempe-factory', function () {
     return view('factory-tempe');
-});
+})->name('tempe.factory');
 
-Route::get('/bakso-factory', function () {
+Route::get('factory/bakso-factory', function () {
     return view('factory-bakso');
-});
+})->name('bakso.factory');
 
-Route::get('/pecel-factory', function () {
+Route::get('factory/pecel-factory', function () {
     return view('factory-pecel');
-});
+})->name('pecel.factory');
 
-Route::get('/halal-mart-yonezu', function () {
+Route::get('halal-mart/yonezu', function () {
     return view('mart-yonezu');
-});
+})->name('mart-yonezu');
 
-Route::get('/halal-mart-tanuki', function () {
+Route::get('halal-mart/tanuki', function () {
     return view('mart-tanuki');
-});
+})->name('mart-tanuki');
 
-Route::get('/halal-mart-grosser', function () {
+Route::get('halal-mart/grosser', function () {
     return view('mart-grosser');
-});
+})->name('mart-grosser');
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 

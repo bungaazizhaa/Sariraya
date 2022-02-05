@@ -68,32 +68,18 @@
         <div class="column">
             <div class="card visi">
                 <img src="{{ asset('assets/images/5.png') }}" alt="">
-                <h3>VISI</h3>
-                <p>
-                    A pioneer of Indonesian Halal Food Business in Japan <br> to provide good
-                    selected quality imported
-                    Halal foods to the society.</p>
+                <h3>{{ $getVisi->judul_profil }}</h3>
+                <p>{{ $getVisi->isi_profil }}</p>
             </div>
         </div>
 
     </div>
     <div class="row-about">
         <div class="column">
-            <div class="card misi">
+            <div class="card misi text-left">
                 <img src="{{ asset('assets/images/22.png') }}" alt="">
-                <h3>MISI</h3>
-                <li>To import good selected quality Halal foods from the world, especially Indonesia to Japan.
-                </li>
-                <li>To produce, provide, introduce and distribute good selected quality Halal foods to the
-                    society in
-                    Japan, especially Moslem and Indonesian communities.</li>
-                <li>To contribute to the establishment of good friendship and cooperation between Indonesia and
-                    Japan
-                    and the development of Indonesian community in Japan.</li>
-                <li>To contribute to Indonesian education and the improvement of Indonesian small medium
-                    enterprises.
-                </li>
-
+                <h3 class="text-center">{{ $getMisi->judul_profil }}</h3>
+                {!! $getMisi->isi_profil !!}
             </div>
         </div>
     </div>

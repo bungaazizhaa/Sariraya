@@ -12,30 +12,30 @@
         </div>
 
         <!--
-                                                                            <div class="myslider fade">
-                                                                              <div class="txt">
-                                                                                <h1>Gambar 2</h1>
-                                                                                <p>deskripsi</p>
-                                                                              </div>
-                                                                              <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
-                                                                            </div>
-                                                                            <div class="myslider fade">
-                                                                              <div class="txt">
-                                                                                <h1>Gambar 3</h1>
-                                                                                <p>deskripsi</p>
-                                                                              </div>
-                                                                              <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
-                                                                            </div>
+                                                                                    <div class="myslider fade">
+                                                                                      <div class="txt">
+                                                                                        <h1>Gambar 2</h1>
+                                                                                        <p>deskripsi</p>
+                                                                                      </div>
+                                                                                      <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
+                                                                                    </div>
+                                                                                    <div class="myslider fade">
+                                                                                      <div class="txt">
+                                                                                        <h1>Gambar 3</h1>
+                                                                                        <p>deskripsi</p>
+                                                                                      </div>
+                                                                                      <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
+                                                                                    </div>
 
-                                                                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                                                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                                                                            
-                                                                            <div class="dotsbox" style="text-align: center;">
-                                                                              <span class="dot" onclick="currentSlide(1)"></span>
-                                                                              <span class="dot" onclick="currentSlide(2)"></span>
-                                                                              <span class="dot" onclick="currentSlide(3)"></span>
-                                                                            </div>
-                                                                          </div>-->
+                                                                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                                                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                                                                    
+                                                                                    <div class="dotsbox" style="text-align: center;">
+                                                                                      <span class="dot" onclick="currentSlide(1)"></span>
+                                                                                      <span class="dot" onclick="currentSlide(2)"></span>
+                                                                                      <span class="dot" onclick="currentSlide(3)"></span>
+                                                                                    </div>
+                                                                                  </div>-->
 
     </div>
 
@@ -81,8 +81,7 @@
     <div class="row katalog">
         <div class="col-lg teksdonlot">
             <p>DOWNLOAD SARIRAYA <br> CATALOGUE HERE!</p>
-            <a href="https://drive.google.com/file/d/1RFcPb3Jz-w5jTfxX5NYBNKrTwg3ZfhA6/view"
-                class="btn donlot">DOWNLOAD</a>
+            <a href="{{ $getLinkCatalog->isi_profil }}" class="btn donlot">DOWNLOAD</a>
         </div>
         <div class="col-lg-6">
             <img src="{{ asset('assets/images/katalog.png') }}" alt="" class="img-fluid" />

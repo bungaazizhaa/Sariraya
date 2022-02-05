@@ -17,9 +17,9 @@ class AboutController extends Controller
     public function index()
     {
         $getAllProfil = DB::table('tbl_profil')->limit(9)->get();
-        // $data = [
-        //     'profil' => $this->ProfilModel->allData()
-        // ];
-        return view('about', compact('getAllProfil'));
+        $getVisi = DB::table('tbl_profil')->where('nama_profil', '=', 'visi')->first();
+        $getMisi = DB::table('tbl_profil')->where('nama_profil', '=', 'misi')->first();
+
+        return view('about', compact('getAllProfil', 'getVisi', 'getMisi'));
     }
 }

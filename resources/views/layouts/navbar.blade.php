@@ -47,24 +47,34 @@
                     <a class="dropdown-item" href="#">Halal Steak & Shake</a>
                 </div>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-expanded="false">Our Factory</a>
+            <li class="nav-item dropdown"><a
+                    class="nav-link dropdown-toggle {{ Request::segment(1) === 'factory' ? 'text-success' : null }}"
+                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Our
+                    Factory</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/tempe-factory">Tempe Factory</a>
+                    <a class="dropdown-item {{ url()->current() === route('tempe.factory') ? 'text-success' : null }}"
+                        href="{{ route('tempe.factory') }}">Tempe Factory</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/bakso-factory">Bakso Factory</a>
+                    <a class="dropdown-item {{ url()->current() === route('bakso.factory') ? 'text-success' : null }}"
+                        href="{{ route('bakso.factory') }}">Bakso Factory</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/pecel-factory">Pecel Factory</a>
+                    <a class="dropdown-item {{ url()->current() === route('pecel.factory') ? 'text-success' : null }}"
+                        href="{{ route('pecel.factory') }}">Pecel Factory</a>
                 </div>
             </li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-toggle="dropdown" aria-expanded="false">Halal Mart Store</a>
+            <li class="nav-item dropdown"><a
+                    class="nav-link dropdown-toggle {{ Request::segment(1) === 'halal-mart' ? 'text-success' : null }}"
+                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Halal Mart
+                    Store</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/halal-mart-yonezu">Halal Mart Yonezu</a>
+                    <a class="dropdown-item {{ url()->current() === route('mart-yonezu') ? 'text-success' : null }}"
+                        href="{{ route('mart-yonezu') }}">Halal Mart Yonezu</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/halal-mart-tanuki">Halal Mart Tanuki</a>
+                    <a class="dropdown-item {{ url()->current() === route('mart-tanuki') ? 'text-success' : null }}"
+                        href="{{ route('mart-tanuki') }}">Halal Mart Tanuki</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/halal-mart-grosser">Halal Mart Grosser</a>
+                    <a class="dropdown-item {{ url()->current() === route('mart-grosser') ? 'text-success' : null }}"
+                        href="{{ route('mart-grosser') }}">Halal Mart Grosser</a>
                 </div>
             </li>
             <li class="nav-item"><a
