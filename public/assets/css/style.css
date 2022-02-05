@@ -531,9 +531,19 @@ article a{
     margin: 0 auto;
 }
 
+.misi li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.visi li {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
 .column {
-    width: 50%;
+    width: 100%;
     float: left;
     padding: 0px 10px;
 }
@@ -559,7 +569,7 @@ article a{
 
 .visi{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 450px;
+    max-width: 800px;
     height:max-content;
     margin: auto;
     background-color: #fff;
@@ -576,7 +586,7 @@ article a{
 
 .misi{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 450px;
+    max-width: 800px;
     height:fit-content;
     margin: auto;
     background-color: #fff;
@@ -599,7 +609,7 @@ article a{
     padding-top: 10px;
 }
 
-/* History */
+/* History 
 
 .history {
     margin-top: 100px;
@@ -624,6 +634,110 @@ article a{
 .row-history p{
     margin-left: 50px;
 }
+*/
+
+
+
+/* Timeline */
+.sejarah {
+    min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    
+    margin-top: 100px;
+    padding-bottom: 100px;
+    
+}
+
+.timeline h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.timeline ul {
+    list-style: none;
+}
+
+.timeline ul li {
+    padding: 20px;
+    background-color: #ff9c6b;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline-content p{
+    font-weight: 300;
+    line-height: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .timeline:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height:max-content;
+      background-color: gray;
+    }
+    .timeline ul li {
+      width: 50%;
+      position: relative;
+      margin-bottom: 50px;
+    }
+    .timeline ul li:nth-child(odd) {
+      float: left;
+      clear: right;
+      transform: translateX(-30px);
+      border-radius: 20px 0px 20px 20px;
+    }
+    .timeline ul li:nth-child(even) {
+      float: right;
+      clear: left;
+      transform: translateX(30px);
+      border-radius: 0px 20px 20px 20px;
+    }
+    .timeline ul li::before {
+      content: "";
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: gray;
+      top: 0px;
+    }
+    .timeline ul li:nth-child(odd)::before {
+      transform: translate(50%, -50%);
+      right: -30px;
+    }
+    .timeline ul li:nth-child(even)::before {
+      transform: translate(-50%, -50%);
+      left: -30px;
+    }
+    .timeline-content .date {
+      position: absolute;
+      top: -30px;
+    }
+    .timeline ul li:hover::before {
+      background-color: aqua;
+    }
+  }
+  
+
 
 /* News */
 .banner-news {

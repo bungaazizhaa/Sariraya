@@ -96,58 +96,87 @@
                 <img src="{{ asset('assets/images/5.png') }}" alt="">
                 <h3>VISI</h3>
                 <p>
-                    Sebagai produsen dan pionir perusahaan perdagangan makanan halal Indonesia di Jepang.
-                    Mendistribusikan dan menyediakan produk makanan halal dari berbagai negara Asia, yang bertujuan
-                    untuk memperkenalkan dan mendistribusikan makanan halal berkualitas tinggi dan higienis di
-                    Masyarakat Jepang.</p>
+                    A pioneer of Indonesian Halal Food Business in Japan <br> to provide good selected quality imported Halal foods to the society.</p>
             </div>
         </div>
+
+    </div>
+    <div class="row-about">
         <div class="column">
             <div class="card misi">
                 <img src="{{ asset('assets/images/22.png') }}" alt="">
                 <h3>MISI</h3>
-                <p>
-                    Sebagai perusahaan yang akan menyediakan, memperkenalkan dan mensosialisasikan produk makanan halal
-                    kepada masyarakat muslim yang berada di Jepang. Menjadi perusahaan ganda nasional sekaligus sebagai
-                    media persahabatan antara Indonesia dan Jepang.</p>
+                <li>To import good selected quality Halal foods from the world, especially Indonesia to Japan.</li>
+                <li>To produce, provide, introduce and distribute good selected quality Halal foods to the society in Japan, especially Moslem and Indonesian communities.</li>
+                <li>To contribute to the establishment of good friendship and cooperation between Indonesia and Japan and the development of Indonesian community in Japan.</li>
+                <li>To contribute to Indonesian education and the improvement of Indonesian small medium enterprises.</li>
+
             </div>
         </div>
     </div>
     <!-- Akhir Visi Misi -->
 
     <!-- History -->
-    <div class="container">
-        <div class="history">
-            <h1>HISTORY</h1>
-            <div class="row-history">
-                <div class="col-lg-7">
-                    <p>
-                        Sariraya Co., Ltd. Sahabat, inilah awal mula nama Sariraya, dari kegiatan sosial budaya,
-                        olahraga (UNDOKAI) keagamaan, seminar & shimposium pada tahun 2004 di Prefektur Aichi. Mungkin
-                        Sariraya adalah satu-satunya perusahaan Indonesia di Jepang yang didirikan oleh orang Indonesia
-                        (Founder Suyoto Rais, Teguh Wahyudi). Sariraya selalu berusaha untuk berkembang dan berkembang,
-                        dengan manajemen yang profesional.
-                    </p>
-                    <p>Februari 2005, Nama Resmi Sahabat berubah menjadi Sariraya Yugengaisha & ditawarkan kepada
-                        pecinta pendamping Jepang untuk Indonesia untuk bergabung dalam manajemen Sariraya. Tahun 2006
-                        (Pak Takahito Sato) 2010 Sariraya tumbang, pendirinya mundur dari Sariraya karena kondisi yang
-                        sangat sulit untuk bertahan hidup. (Beberapa pendiri kembali ke Indonesia, yang lain kembali
-                        bekerja).
+    <div class="sejarah">
+        <div class="container">
+            <div class="timeline">
+                <h1>HISTORY</h1>
+                <ul>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2022</h1>
+                                <p>The opening of Sariraya Center and Indonesian SME Center (インドネシア共和国 中小企業製品).</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2021</h3>
+                            <p> - Sariraya expanded it`s business by opening of Halal Pizza Station at 31st July 2021. Pizza Station is the one and only Halal Pizza in Nishio city located next to Sariraya Halal Mart. <br>
+                                - The opening of Halal Kombini Plus+ in Nagoya City, a franchise of Halal food retail shop. <br>
+                                - Sariraya Co., Ltd. was awarded Primaduta Award by the Ministry of Trading Republic of Indonesia as best importer of Indonesian products.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2020</h3>
+                            <p>The opening of Sariraya Halal Mart & Online Shop and also Halal Steak & Shake at 17th October 2020 which are located at Tanuki cho, Nishio city.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2019</h3>
+                            <p>- The establishment of PT Sinergi Cita Mulia Indonesia, the exporter company to supply Sariraya products. <br>
+                                - The opening of Halal Fried Chicken (HFC) Japan restaurant.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2013</h3>
+                            <p>Sariraya changed the status to 株式会社サリラヤ (Sariraya Co., Ltd.)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2010</h3>
+                            <p>The launching of Sariraya Halal Online Shop.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2007</h3>
+                            <p>The Opening of Sariraya Halal Restaurant and Halal Mart in Toyota city.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3>2005</h3>
+                            <p>Sariraya started its business as 有限会社サリラヤ with some business units such as tempeh factory, restaurant and halal mart, and also importing some halal foods products from Indonesia.</p>
+                        </div>
+                    </li>
+                </ul>
 
-                    </p>
-                    <p>Teguh Wahyudi selaku CEO Sariraya pada tahun 2010 memutuskan untuk mengambil alih seluruh kendali
-                        perusahaan bersama istrinya (Komang Iriani). Terakhir, mulai tahun 2013 Sariraya merubah Staus
-                        dari Yugengaisha menjadi Kabushikigaisha Sariraya (PT.). Sariraya kemudian menambah divisi
-                        import and trading guna mendistribusikan produk halal dari Luar Negeri, agar tersebar ke seluruh
-                        Jepang. Sariraya Terus maju dan berkembang menjadi perusahaan Dwi Nasional sekaligus media
-                        silaturahim antara Indonesia dan Jepang. Seperti Visi & Misi perusahaan kami dan Jepang. Sebagai
-                        Visi & Misi perusahaan kami.
-
-                    </p>
-                </div>
-                <div class="col-lg-5">
-                    <img src="{{ asset('assets/images/4.png') }}" alt="">
-                </div>
             </div>
         </div>
     </div>

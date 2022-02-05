@@ -34,7 +34,7 @@
                     </p>
                 </div>
                 <div class="col-lg-5">
-                    <img src="{{ asset('assets/images/4.png') }}" alt="">
+                    <img src="{{ asset('assets/images/maskot1.png') }}" alt="">
                 </div>
             </div>
             <h1>LOCATION</h1>
