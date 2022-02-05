@@ -55,15 +55,7 @@ class AdminContactController extends Controller
 
     public function delete($id_contact)
     {
-        $path = 'gambar_news/';
-        $users = DB::table('tbl_contact')
-            ->where('id_contact', '=', $id_contact)
-            ->first();
-        $userInfo =  $users->gambar_news;
-        if ($userInfo != '') {
-            unlink($path . $userInfo);
-        }
         $this->ContactModel->deleteData($id_contact);
-        return redirect()->route('news')->with('pesan', 'Data berhasil dihapus.');
+        return redirect()->route('contact')->with('pesan', 'Data berhasil dihapus.');
     }
 }

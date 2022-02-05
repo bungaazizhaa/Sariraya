@@ -48,9 +48,10 @@
                                     <td>{{ $data->telephone }}</td>
                                     <td>{{ $data->created_at }}</td>
                                     <td class="text-center">
-                                        <a><i data-toggle="modal" data-target=".bd-delete-modal-admin10"
-                                                style="color:#C43030" data-id=""
-                                                class="fas fa-trash color-danger trash-keynote"></i></a>
+                                        <button type="button" class="btn bg-transparent" data-toggle="modal"
+                                            data-target="#deleteContact{{ $data->id_contact }}"><i style="color:#C43030"
+                                                class="fas fa-trash color-danger trash-keynote"></i>
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -61,6 +62,31 @@
         </div>
     </div>
 
+
+    <!-- Modal Delete News-->
+    @foreach ($contact as $data)
+        <div class="modal fade" id="deleteContact{{ $data->id_contact }}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Hapus Berita</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Anda ingin menghapus pesan dari {{ $data->name }} (ID: {{ $data->id_contact }}) ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" focused>Batal</button>
+                        <a href="/admin-contact/deletecontact/{{ $data->id_contact }}" type="button"
+                            class="btn btn-danger">Hapus</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endforeach
     <!-- Akhir Isi From Information -->
 
     <script>
