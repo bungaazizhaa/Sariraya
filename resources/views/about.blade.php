@@ -24,12 +24,14 @@
     @include('layouts.navbar')
 
     <!-- Slider -->
-    <div class="slider-about">
-        <div class="myslider-about " style="display: block;">
-            <div class="txt">
-                <h1 style="color: aliceblue;">ABOUT US</h1>
+    <div class="slider" style="width:100%;">
+        <div class="myslider" style="display: block; ">
+            <div class="txt ml-n3">
+                <h1 style="font-size:5.2vw; margin-bottom:1vw; color: aliceblue;">
+                    ABOUT US</h1>
+                {{-- <p style="font-size:2.2vw; margin-top:0.125vw;">Pioneer INDONESIAN Halal Food Company in JAPAN.</p> --}}
             </div>
-            <img src="{{ asset('assets/images/foto1.jpg') }}" alt="" style="width:100%; height:100%;">
+            <img src="{{ asset('assets/images/foto1.jpg') }}" style=" width:100%;" alt="">
         </div>
     </div>
 
@@ -37,51 +39,22 @@
 
     <!-- About -->
     <div class="container">
-        <div class="row about">
-            <div class="col-lg-6">
-                <img src="{{ asset('assets/images/fotoprofil.jpg') }}" alt="" class="img-fluid" />
+        <div class="row">
+            <div class="col-12 col-lg-6 mt-4 text-center">
+                <img src="{{ asset('assets/images/fotoprofil.jpg') }}" width="100%" alt="" class="img-fluid rounded" />
             </div>
-            <div class="col-lg tabel-profil">
+            <div class="col-lg-6 tabel-profil">
                 <h2>PROFILE</h2>
                 <table>
-                    <tr>
-                        <th>Name</th>
-                        <td>: Sariraya Co.,Ltd.</td>
-                    </tr>
-                    <tr>
-                        <th>President Director </th>
-                        <td>: TEGUH WAHYUDI</td>
-                    </tr>
-                    <tr>
-                        <th>Managing Marketing Support Division </th>
-                        <td>: MS. KOMANG IRIANI</td>
-                    </tr>
-                    <tr>
-                        <th>Managing Import Devision </th>
-                        <td>: Mr. Takahito Sato</td>
-                    </tr>
-                    <tr>
-                        <th>Managing Production & QC </th>
-                        <td>: MR. JARNO</td>
-                    </tr>
-                    <tr>
-                        <th>Staﬀ Creative</th>
-                        <td>: Deni Krisdianto</td>
-                    </tr>
-                    <tr>
-                        <th>Estabilized </th>
-                        <td>: 2005</td>
-                    </tr>
-                    <tr>
-                        <th>Capital</th>
-                        <td>: 500万</td>
-                    </tr>
-                    <tr>
-                        <th>Location</th>
-                        <td>: 445-0804. Aichi-Ken,
-                            Nishio-Shi, Yonezu-Cho,
-                            Kitaura 75-1</td>
-                    </tr>
+                    <thead>
+                        @foreach ($getAllProfil as $profil)
+                            <tr class=" d-flex mb-auto">
+                                <th style="width: 45%; margin-top:10px;">{{ $profil->judul_profil }}</th>
+                                <td style="width: 55%; margin-top:10px;" class="tabel-profil">: {!! $profil->isi_profil !!}
+                                </td>
+                            </tr>
+                        @endforeach
+                    </thead>
                 </table>
             </div>
 
@@ -90,13 +63,16 @@
     <!-- Akhir About -->
 
     <!-- Visi Misi -->
-    <div class="row-about">
+    <div class="
+                                row-about">
         <div class="column">
             <div class="card visi">
                 <img src="{{ asset('assets/images/5.png') }}" alt="">
                 <h3>VISI</h3>
                 <p>
-                    A pioneer of Indonesian Halal Food Business in Japan <br> to provide good selected quality imported Halal foods to the society.</p>
+                    A pioneer of Indonesian Halal Food Business in Japan <br> to provide good
+                    selected quality imported
+                    Halal foods to the society.</p>
             </div>
         </div>
 
@@ -106,10 +82,17 @@
             <div class="card misi">
                 <img src="{{ asset('assets/images/22.png') }}" alt="">
                 <h3>MISI</h3>
-                <li>To import good selected quality Halal foods from the world, especially Indonesia to Japan.</li>
-                <li>To produce, provide, introduce and distribute good selected quality Halal foods to the society in Japan, especially Moslem and Indonesian communities.</li>
-                <li>To contribute to the establishment of good friendship and cooperation between Indonesia and Japan and the development of Indonesian community in Japan.</li>
-                <li>To contribute to Indonesian education and the improvement of Indonesian small medium enterprises.</li>
+                <li>To import good selected quality Halal foods from the world, especially Indonesia to Japan.
+                </li>
+                <li>To produce, provide, introduce and distribute good selected quality Halal foods to the
+                    society in
+                    Japan, especially Moslem and Indonesian communities.</li>
+                <li>To contribute to the establishment of good friendship and cooperation between Indonesia and
+                    Japan
+                    and the development of Indonesian community in Japan.</li>
+                <li>To contribute to Indonesian education and the improvement of Indonesian small medium
+                    enterprises.
+                </li>
 
             </div>
         </div>
@@ -125,28 +108,41 @@
                     <li>
                         <div class="timeline-content">
                             <h3>2022</h1>
-                                <p>The opening of Sariraya Center and Indonesian SME Center (インドネシア共和国 中小企業製品).</p>
+                                <p>The opening of Sariraya Center and Indonesian SME Center (インドネシア共和国 中小企業製品).
+                                </p>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-content">
                             <h3>2021</h3>
-                            <p> - Sariraya expanded it`s business by opening of Halal Pizza Station at 31st July 2021. Pizza Station is the one and only Halal Pizza in Nishio city located next to Sariraya Halal Mart. <br>
-                                - The opening of Halal Kombini Plus+ in Nagoya City, a franchise of Halal food retail shop. <br>
-                                - Sariraya Co., Ltd. was awarded Primaduta Award by the Ministry of Trading Republic of Indonesia as best importer of Indonesian products.
+                            <p> - Sariraya expanded it`s business by opening of Halal Pizza Station at 31st July
+                                2021.
+                                Pizza Station is the one and only Halal Pizza in Nishio city located next to
+                                Sariraya
+                                Halal Mart. <br>
+                                - The opening of Halal Kombini Plus+ in Nagoya City, a franchise of Halal food
+                                retail
+                                shop. <br>
+                                - Sariraya Co., Ltd. was awarded Primaduta Award by the Ministry of Trading
+                                Republic of
+                                Indonesia as best importer of Indonesian products.
                             </p>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-content">
                             <h3>2020</h3>
-                            <p>The opening of Sariraya Halal Mart & Online Shop and also Halal Steak & Shake at 17th October 2020 which are located at Tanuki cho, Nishio city.</p>
+                            <p>The opening of Sariraya Halal Mart & Online Shop and also Halal Steak & Shake at
+                                17th
+                                October 2020 which are located at Tanuki cho, Nishio city.</p>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-content">
                             <h3>2019</h3>
-                            <p>- The establishment of PT Sinergi Cita Mulia Indonesia, the exporter company to supply Sariraya products. <br>
+                            <p>- The establishment of PT Sinergi Cita Mulia Indonesia, the exporter company to
+                                supply
+                                Sariraya products. <br>
                                 - The opening of Halal Fried Chicken (HFC) Japan restaurant.
                             </p>
                         </div>
@@ -172,7 +168,10 @@
                     <li>
                         <div class="timeline-content">
                             <h3>2005</h3>
-                            <p>Sariraya started its business as 有限会社サリラヤ with some business units such as tempeh factory, restaurant and halal mart, and also importing some halal foods products from Indonesia.</p>
+                            <p>Sariraya started its business as 有限会社サリラヤ with some business units such as tempeh
+                                factory, restaurant and halal mart, and also importing some halal foods products
+                                from
+                                Indonesia.</p>
                         </div>
                     </li>
                 </ul>

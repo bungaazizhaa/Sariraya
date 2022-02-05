@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AboutModel;
+use App\Models\ProfilModel;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AboutController extends Controller
 {
     public function __construct()
     {
-        $this->AboutModel = new AboutModel();
+        $this->ProfilModel = new ProfilModel();
     }
 
     public function index()
     {
+        $getAllProfil = DB::table('tbl_profil')->limit(9)->get();
         // $data = [
-        //     'about' => $this->AboutModel->allData()
+        //     'profil' => $this->ProfilModel->allData()
         // ];
-        // return view('about', $data);
-        return view('about');
+        return view('about', compact('getAllProfil'));
     }
 }

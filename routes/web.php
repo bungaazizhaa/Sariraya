@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\AdminContactController;
+use App\Http\Controllers\Admin\AdminProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,4 +70,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin-news/deletenews/{id_news}', [AdminNewsController::class, 'delete']);
 
     Route::get('/admin-contact/deletecontact/{id_contact}', [AdminContactController::class, 'delete']);
+
+    Route::get('/admin-profil', [AdminProfilController::class, 'index'])->name('profil');
+    Route::post('/admin-profil/updateprofil/{id_profil}', [AdminProfilController::class, 'update']);
+    Route::get('/admin-profil/editprofil/{id_profil}', [AdminProfilController::class, 'edit']);
 });
