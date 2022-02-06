@@ -19,18 +19,20 @@ class DashboardController extends Controller
 
     public function index()
     {
+        $totalcatatan = DB::table('tbl_catatan')->count();
+        $totalcontact = DB::table('tbl_contact')->count();
         $data = [
             'catatan' => $this->CatatanModel->allData()
         ];
-        return view('admin.admin-dashboard', $data);
+        return view('admin.admin-dashboard', $data)->with(compact('totalcatatan', 'totalcontact'));
     }
 
 
 
-    public function add()
-    {
-        return view('admin.admin-dashboard');
-    }
+    // public function add()
+    // {
+    //     return view('admin.admin-dashboard');
+    // }
 
     public function insert()
     {

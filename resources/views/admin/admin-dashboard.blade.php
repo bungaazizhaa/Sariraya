@@ -6,16 +6,14 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <div class="card border-info mb-3">
-                <div class="card-header bg-primary">
+                <div class="card-header bg-info">
                     <h4 class="card-title m-0 text-white">Catatan<span><button
                                 class="btn text-white bg-transparent float-right py-0" data-toggle="modal"
                                 data-target="#addCatatan"><i class="fas fa-plus"></i></button></span>
                     </h4>
-
                 </div>
                 <div class="card-body m-0">
                     <div class="row">
-
                         @foreach ($catatan as $data)
                             <div class="col-12">
                                 <div class="card text-center border-info my-1">
@@ -40,11 +38,37 @@
                                 </div>
                             </div>
                         @endforeach
-
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-12 col-md-6">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <!-- small box -->
+                    <div style="cursor: pointer" onclick="location.href='{{ route('news') }}'"
+                        class="card bg-info text-white mb-3">
+                        <div class="card-body p-2 ml-2">
+                            <h3>{{ $totalcatatan }}<i class="fas fa-arrow-circle-right d-flex float-right mt-4 mr-3"></i>
+                            </h3>
+                            <h5>Total Berita/ News</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <!-- small box -->
+                    <div style="cursor: pointer" onclick="location.href='{{ route('contact.index') }}'"
+                        class="card bg-info text-white mb-3">
+                        <div class="card-body p-2 ml-2">
+                            <h3>{{ $totalcontact }}<i class="fas fa-arrow-circle-right d-flex float-right mt-4 mr-3"></i>
+                            </h3>
+                            <h5>Total Pesan Masuk</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 

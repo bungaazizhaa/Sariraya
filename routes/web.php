@@ -56,7 +56,6 @@ Route::get('halal-mart/grosser', function () {
 
 
 Auth::routes();
-Route::get('/admin-contact', [AdminContactController::class, 'index'])->name('contact.index');
 Route::post('/contact/insertcontact', [AdminContactController::class, 'insert'])->name('addcontact');
 
 // CRUD ADMIN
@@ -68,6 +67,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin-news/updatenews/{id_news}', [AdminNewsController::class, 'update']);
     Route::get('/admin-news/deletenews/{id_news}', [AdminNewsController::class, 'delete']);
 
+    Route::get('/admin-contact', [AdminContactController::class, 'index'])->name('contact.index');
     Route::get('/admin-contact/deletecontact/{id_contact}', [AdminContactController::class, 'delete']);
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

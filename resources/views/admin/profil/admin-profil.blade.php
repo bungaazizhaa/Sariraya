@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Isi Content -->
-    <h1 class="mt-4">Table Profil</h1>
+    <h1 class="mt-4">Profil</h1>
     @if (session('pesan'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Berhasil !</strong> {{ session('pesan') }}
