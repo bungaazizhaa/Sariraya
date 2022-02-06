@@ -1,15 +1,9 @@
 @extends('layouts.admin-template')
 
 @section('content')
-    <h1 class="mt-4">Contact</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-        <li class="breadcrumb-item active">Contact</li>
-    </ol>
-
     <!-- Isi Form Information -->
     <div class="container-fluid">
-        <h1 class="mt-4">Table Information</h1>
+        <h1 class="mt-4">Contact</h1>
         <div class="card mb-4">
             <div class="card-body">
                 <div class="table-responsive">
@@ -91,7 +85,9 @@
 
     <script>
         $(function() {
-            $("#tbl_contact").DataTable({});
+            $("#tbl_contact").DataTable({
+                stateSave: true,
+            });
         });
     </script>
 @endsection

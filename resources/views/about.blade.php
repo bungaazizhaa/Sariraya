@@ -69,7 +69,7 @@
             <div class="card visi">
                 <img src="{{ asset('assets/images/5.png') }}" alt="">
                 <h3>{{ $getVisi->judul_profil }}</h3>
-                <p>{{ $getVisi->isi_profil }}</p>
+                <p>{!! $getVisi->isi_profil !!}</p>
             </div>
         </div>
 

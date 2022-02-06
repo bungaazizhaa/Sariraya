@@ -27,8 +27,8 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="judulNewsInput">Nama Berita</label>
-                        <input name="nama_profil" type="text" class="form-control" id="nama_profil" placeholder=""
+                        {{-- <label class="mb-1" for="judulNewsInput">Nama Profil</label> --}}
+                        <input name="nama_profil" type="hidden" class="form-control" id="nama_profil" placeholder=""
                             value="{{ old('nama_profil', $profil->nama_profil) }}">
                         <div class="text-danger">
                             @error('nama_profil')
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="judulNewsInput">Judul Berita</label>
+                        <label class="mb-1" for="judulNewsInput">Judul Profil</label>
                         <input name="judul_profil" type="text" class="form-control" id="judul_profil" placeholder=""
                             value="{{ old('judul_profil', $profil->judul_profil) }}">
                         <div class="text-danger">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="isiProfilInput">Isi</label>
+                        <label class="mb-1" for="isiProfilInput">Isi Profil</label>
                         <textarea id="summernote" name="isi_profil" class="form-control" id="isi_profil"
                             rows="3">{{ old('isi_profil', $profil->isi_profil) }}</textarea>
                         <div class="text-danger">

@@ -17,9 +17,9 @@
                 <table id="tbl_profil" class="display table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            {{-- <th>No</th> --}}
                             <th>ID</th>
-                            <th>Nama</th>
+                            {{-- <th>Nama</th> --}}
                             <th>Judul</th>
                             <th>Isi</th>
                             <th>Action</th>
@@ -31,9 +31,9 @@
                         @endphp
                         @foreach ($profil as $data)
                             <tr>
-                                <td>{{ $no++ }}</td>
-                                <td>{{ $data->id_profil }}</td>
-                                <td>{{ $data->nama_profil }}</td>
+                                {{-- <td>{{ $no++ }}</td> --}}
+                                <td class="text-center">{{ $data->id_profil }}</td>
+                                {{-- <td>{{ $data->nama_profil }}</td> --}}
                                 <td>{{ $data->judul_profil }}</td>
                                 <td>{!! Str::limit(strip_tags($data->isi_profil), 160) !!}</td>
                                 <td class="text-center">
@@ -69,7 +69,9 @@
 
     <script>
         $(function() {
-            $("#tbl_profil").DataTable({});
+            $("#tbl_profil").DataTable({
+                stateSave: true,
+            });
         });
     </script>
 @endsection

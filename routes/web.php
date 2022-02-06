@@ -54,7 +54,6 @@ Route::get('halal-mart/grosser', function () {
     return view('mart-grosser');
 })->name('mart-grosser');
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Auth::routes();
 Route::get('/admin-contact', [AdminContactController::class, 'index'])->name('contact.index');
@@ -70,6 +69,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin-news/deletenews/{id_news}', [AdminNewsController::class, 'delete']);
 
     Route::get('/admin-contact/deletecontact/{id_contact}', [AdminContactController::class, 'delete']);
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/admin-catatan/insertcatatan', [DashboardController::class, 'insert'])->name('addcatatan');
+    Route::post('/admin-catatan/updatecatatan/{id_catatan}', [DashboardController::class, 'update'])->name('editcatatan');
+    Route::get('/admin-catatan/deletecatatan/{id_catatan}', [DashboardController::class, 'delete']);
 
     Route::get('/admin-profil', [AdminProfilController::class, 'index'])->name('profil');
     Route::post('/admin-profil/updateprofil/{id_profil}', [AdminProfilController::class, 'update']);

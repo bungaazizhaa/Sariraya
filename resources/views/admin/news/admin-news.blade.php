@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Isi Content -->
-    <h1 class="mt-4">Table News</h1>
+    <h1 class="mt-4">News</h1>
     @if (session('pesan'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Berhasil !</strong> {{ session('pesan') }}
@@ -108,7 +108,9 @@
 
     <script>
         $(function() {
-            $("#tbl_news").DataTable({});
+            $("#tbl_news").DataTable({
+                stateSave: true,
+            });
         });
     </script>
 @endsection
