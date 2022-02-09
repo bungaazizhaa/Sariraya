@@ -243,6 +243,17 @@ nav a {
     transition: transform .3s;
 }
 
+.mycard1 {
+    border: none;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    transition: transform .3s;
+}
+
+.mycard1:hover {
+    transform: translate(5px);
+    box-shadow:  2px 2px 26px 0px rgba(0,0,0,0.3);;
+}
+
 .mycard:hover {
     transform: translate(5px);
     box-shadow:  2px 2px 26px 0px rgba(0,0,0,0.3);;
@@ -843,4 +854,17 @@ td.tabel-profil {
 .peta {
     text-align: center;
     margin-top: 30px;
+}
+
+.slider-tempe img {
+    height: 400px;
+    width: 100%;
+}
+
+.tempe {
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3%;
 }

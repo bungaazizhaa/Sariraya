@@ -33,7 +33,7 @@
                     <div class="col-12 col-md-6 text-md-left text-center d-flex my-auto">
                         <div class="kepada ml-md-5 mx-auto">
                             <h2>For Further Information</h2>
-                            <p>Japanese People</p>
+                            <p>Foreign People</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
