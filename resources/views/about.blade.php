@@ -48,9 +48,9 @@
                 <table>
                     <thead>
                         @foreach ($getAllProfil as $profil)
-                            <tr class=" d-flex mb-auto">
-                                <th style="width: 45%; margin-top:10px;">{{ $profil->judul_profil }}</th>
-                                <td style="width: 55%; margin-top:10px;" class="tabel-profil">: {!! $profil->isi_profil !!}
+                            <tr class="data-profil">
+                                <th style="width: 45%">{{ $profil->judul_profil }}</th>
+                                <td style="width: 55%">: {!! $profil->isi_profil !!}
                                 </td>
                             </tr>
                         @endforeach

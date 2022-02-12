@@ -16,7 +16,7 @@ class AboutController extends Controller
 
     public function index()
     {
-        $getAllProfil = DB::table('tbl_profil')->limit(9)->get();
+        $getAllProfil = DB::table('tbl_profil')->where('id_profil','>',3)->get();
         $getVisi = DB::table('tbl_profil')->where('nama_profil', '=', 'visi')->first();
         $getMisi = DB::table('tbl_profil')->where('nama_profil', '=', 'misi')->first();
 

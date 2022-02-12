@@ -74,8 +74,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin-catatan/insertcatatan', [DashboardController::class, 'insert'])->name('addcatatan');
     Route::post('/admin-catatan/updatecatatan/{id_catatan}', [DashboardController::class, 'update'])->name('editcatatan');
     Route::get('/admin-catatan/deletecatatan/{id_catatan}', [DashboardController::class, 'delete']);
-
+    
     Route::get('/admin-profil', [AdminProfilController::class, 'index'])->name('profil');
     Route::post('/admin-profil/updateprofil/{id_profil}', [AdminProfilController::class, 'update']);
     Route::get('/admin-profil/editprofil/{id_profil}', [AdminProfilController::class, 'edit']);
+    Route::get('/admin-addprofil', [AdminProfilController::class, 'add'])->name('addprofil');
+    Route::post('/admin-profil/insertprofil', [AdminProfilController::class, 'insert']);
+    Route::get('/admin-profil/deleteprofil/{id_profil}', [AdminProfilController::class, 'delete']);
 });

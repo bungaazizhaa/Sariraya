@@ -26,6 +26,36 @@ class AdminProfilController extends Controller
         ];
         return view('admin.profil.admin-profil', $data);
     }
+
+    
+    public function add()
+    {
+        return view('admin.profil.admin-addprofil');
+    }
+
+    public function insert()
+    {
+        Request()->validate([
+            'nama_profil' => 'required',
+            'judul_profil' => 'required',
+            'isi_profil' => 'required',
+        ], [
+            'nama_profil.required' => 'Username wajib diisi.',
+            'judul_profil.required' => 'Judul wajib diisi.',
+            'isi_profil.required' => 'Isi wajib diisi.',
+        ]);
+
+        $data = [
+            'id_profil' => Request()->id_profil,
+            'nama_profil' => Request()->nama_profil,
+            'judul_profil' => Request()->judul_profil,
+            'isi_profil' => Request()->isi_profil
+        ];
+
+        $this->ProfilModel->addData($data);
+        return redirect()->route('profil')->with('pesan', 'Data berhasil di Tambah.');
+    }
+
     public function edit($id_profil)
     {
         if (!$this->ProfilModel->detailData($id_profil)) {
@@ -44,7 +74,7 @@ class AdminProfilController extends Controller
             'judul_profil' => 'required',
             'isi_profil' => 'required',
         ], [
-            'nama_profil.required' => 'Nama wajib diisi.',
+            'nama_profil.required' => 'Username wajib diisi.',
             'judul_profil.required' => 'Judul wajib diisi.',
             'isi_profil.required' => 'Isi wajib diisi.',
         ]);
@@ -58,5 +88,11 @@ class AdminProfilController extends Controller
 
         $this->ProfilModel->editData($id_profil, $data);
         return redirect()->route('profil')->with('pesan', 'Data berhasil di Ubah.');
+    }
+
+    public function delete($id_profil)
+    {
+        $this->ProfilModel->deleteData($id_profil);
+        return redirect()->route('profil')->with('pesan', 'Data berhasil dihapus.');
     }
 }

@@ -18,18 +18,18 @@ class ProfilModel extends Model
         return DB::table('tbl_profil')->where('id_profil', $id_profil)->first();
     }
 
-    // public function addData($data)
-    // {
-    //     return DB::table('tbl_profil')->insert($data);
-    // }
+    public function addData($data)
+    {
+        return DB::table('tbl_profil')->insert($data);
+    }
 
     public function editData($id_profil, $data)
     {
         return DB::table('tbl_profil')->where('id_profil', $id_profil)->update($data);
     }
 
-    // public function deleteData($id_profil)
-    // {
-    //     return DB::table('tbl_profil')->where('id_profil', $id_profil)->delete();
-    // }
+    public function deleteData($id_profil)
+    {
+        return DB::table('tbl_profil')->where('id_profil', $id_profil)->delete();
+    }
 }

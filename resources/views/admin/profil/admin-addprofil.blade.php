@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container-fluid px-4">
-        <h1 class="mt-4">News</h1>
+        <h1 class="mt-4">Tambah Profil</h1>
 
         <!-- Edit News -->
         <div class="card mb-4">
@@ -10,18 +10,12 @@
                 <a href="{{ url('admin-profil') }}"><button class="btn btn-primary">Back</button></a>
             </div>
             <div class="card-body">
-                <form action="/admin-profil/updateprofil/{{ $profil->id_profil }}" method="POST">
+                <form action="/admin-profil/insertprofil" method="POST" >
                     @csrf
                     <div class="form-group mb-2">
-                        @if (($profil->id_profil) > 3)
-                        <label class="mb-1" for="judulNewsInput">ID</label>
-                        @endif
-                        <input name="id_profil" type="text"
-                        @if (($profil->id_profil) < 4)
-                        hidden
-                        @endif
-                        class="form-control" id="id_profil" placeholder=""
-                            value="{{ old('id_profil', $profil->id_profil) }}">
+                        <label class="mb-1" for="IdProfilInput">ID</label>
+                        <input name="id_profil" type="text" class="form-control" id="id_profil" placeholder="Angka yang menentukan Urutan Tampilan, Tidak Boleh Sama dengan yang sudah Ada"
+                            value="{{ old('id_profil') }}">
                         <div class="text-danger">
                             @error('id_profil')
                                 {{ $message }}
@@ -29,15 +23,9 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        @if (($profil->id_profil) > 3)
-                        <label class="mb-1" for="judulNewsInput">Username</label>
-                        @endif
-                        <input name="nama_profil" type="text"
-                        @if (($profil->id_profil) < 4)
-                        hidden
-                        @endif
-                        class="form-control" id="nama_profil" placeholder=""
-                            value="{{ old('nama_profil', $profil->nama_profil) }}">
+                        <label class="mb-1" for="judulProfilInput">Username</label>
+                        <input name="nama_profil" type="text" class="form-control" id="nama_profil" placeholder="hurufkecil_tanpaspasi"
+                            value="{{ old('nama_profil') }}">
                         <div class="text-danger">
                             @error('nama_profil')
                                 {{ $message }}
@@ -45,10 +33,9 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-
-                        <label class="mb-1" for="judulNewsInput">Judul</label>
-                        <input name="judul_profil" type="text" class="form-control" id="judul_profil" placeholder=""
-                            value="{{ old('judul_profil', $profil->judul_profil) }}">
+                        <label class="mb-1" for="judulProfilInput">Judul</label>
+                        <input name="judul_profil" type="text" class="form-control" id="judul_profil" placeholder="Nama Jabatan yang Akan Ditampilkan"
+                            value="{{ old('judul_profil') }}">
                         <div class="text-danger">
                             @error('judul_profil')
                                 {{ $message }}
@@ -58,7 +45,7 @@
                     <div class="form-group mb-2">
                         <label class="mb-1" for="isiProfilInput">Isi</label>
                         <textarea id="summernote" name="isi_profil" class="form-control" id="isi_profil"
-                            rows="3">{{ old('isi_profil', $profil->isi_profil) }}</textarea>
+                            rows="3">{{ old('isi_profil') }}</textarea>
                         <div class="text-danger">
                             @error('isi_profil')
                                 {{ $message }}
@@ -66,7 +53,7 @@
                         </div>
                     </div>
                     <div class="button-submit">
-                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="submit" class="btn btn-success">Tambah</button>
                     </div>
                 </form>
             </div>
