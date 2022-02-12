@@ -12,21 +12,21 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="txt">
-                    <h1 style="font-size:5.2vw; color: aliceblue;">Sariraya.Co.Ltd.</h1>
+                    <h1>Sariraya.Co.Ltd.</h1>
                     <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
                 </div>
                 <img src="{{ asset('assets/images/banner1.png') }}">
             </div>
             <div class="carousel-item">
                 <div class="txt">
-                    <h1 style="font-size:5.2vw; color: aliceblue;">Sariraya.Co.Ltd.</h1>
+                    <h1>Sariraya.Co.Ltd.</h1>
                     <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
                 </div>
                 <img src="{{ asset('assets/images/banner2.png') }}">
             </div>
             <div class="carousel-item">
                 <div class="txt">
-                    <h1 style="font-size:5.2vw; color: aliceblue;">Sariraya.Co.Ltd.</h1>
+                    <h1>Sariraya.Co.Ltd.</h1>
                     <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
                 </div>
                 <img src="{{ asset('assets/images/banner3.png') }}">

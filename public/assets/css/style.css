@@ -158,6 +158,7 @@ nav a {
 
 .txt {
     position: absolute;
+    margin-left: -30px;
     color: #ffffff;
     letter-spacing: 2px;
     line-height: 35px;
@@ -168,6 +169,17 @@ nav a {
     animation-name: posi;
     animation-duration: 2s;
     z-index: 1;
+}
+
+.txt h1 {
+    font-size: calc(2.5vw + 1rem) !important;
+    color: aliceblue !important;
+}
+
+.txt p {
+    font-size: calc(1.2vw + 0.5rem) !important;
+    line-height: calc(1vw + 1rem) !important;
+    color: aliceblue !important;
 }
 
 @-webkit-keyframes posi {
@@ -197,6 +209,9 @@ nav a {
     font-weight: bold;
     font-size: 20px;
 }
+/* .slider {
+    overflow: hidden;
+} */
 .slider img {
     transform: scale(1.5, 1.5);
     -webkit-animation-name: zoomin;
@@ -848,13 +863,13 @@ td.tabel-profil {
 }
 
 .slider-tempe img {
-    height: 400px;
-    width: 100%;
+    background-size: cover;
+    min-height: 250px;
+    height: 100%;
+    width: 100vw;
 }
 
 .tempe {
-    margin-left: 20%;
-    margin-right: 20%;
     justify-content: center;
     text-align: center;
     margin-top: 3%;
