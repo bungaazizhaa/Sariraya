@@ -43,20 +43,31 @@
 <!-- History -->
 <div class="container">
     <div class="tempe">
-
-        <p>
-            Sariraya Co., Ltd. Sahabat, inilah awal mula nama Sariraya, dari kegiatan sosial budaya,
-            olahraga (UNDOKAI) keagamaan, seminar & shimposium pada tahun 2004 di Prefektur Aichi. Mungkin
-            Sariraya adalah satu-satunya perusahaan Indonesia di Jepang yang didirikan oleh orang Indonesia
-            (Founder Suyoto Rais, Teguh Wahyudi). Sariraya selalu berusaha untuk berkembang dan berkembang,
-            dengan manajemen yang profesional.
-        </p>
-        <h1>LOCATION</h1>
+        <h1>OUR PRODUCTS</h1>
     </div>
 
+    <div class="container">
+        <div class="row pecel mb-lg-2 mb-lg-7 mx-lg-5 mx-sm-2 my-sm-2">
+            <div class="col-sm-4 mt-3">
+                <div class="card mycard1 text-center">
+                    <img class="card-img-top" src="{{ asset('assets/images/pecel1.jpeg') }}" alt="Card image cap">
 
-    <div class="peta">
-        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.6258874255736!2d137.05771521466258!3d34.89073958052526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600497329682bcc7%3A0xa6cc839ddfff596e!2sNakanohata-54%20Yonezuch%C5%8D%2C%20Nishio%2C%20Aichi%20445-0802%2C%20Japan!5e0!3m2!1sen!2sid!4v1641288128329!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-3">
+                <div class="card mycard1 text-center">
+                    <img class="card-img-top" src="{{ asset('assets/images/pecel2.jpeg') }}" alt="Card image cap">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tempe">
+        <h1>LOCATION</h1>
+        <div class="peta">
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.6258874255736!2d137.05771521466258!3d34.89073958052526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600497329682bcc7%3A0xa6cc839ddfff596e!2sNakanohata-54%20Yonezuch%C5%8D%2C%20Nishio%2C%20Aichi%20445-0802%2C%20Japan!5e0!3m2!1sen!2sid!4v1641288128329!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+        </div>
     </div>
 </div>
 

@@ -868,3 +868,7 @@ td.tabel-profil {
     text-align: center;
     margin-top: 3%;
 }
+
+.pecel {
+    justify-content: center;
+}

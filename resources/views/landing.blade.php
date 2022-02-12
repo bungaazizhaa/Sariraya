@@ -1,7 +1,43 @@
 @extends('layouts.home-template')
 @section('content')
 <!-- Slider -->
-<div class="slider" style="width:100%;">
+
+<div class="slider-tempe">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="txt">
+                    <h1 style="font-size:5.2vw; color: aliceblue;">Sariraya.Co.Ltd.</h1>
+                    <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
+                </div>
+                <img src="{{ asset('assets/images/banner1.png') }}">
+            </div>
+            <div class="carousel-item">
+                <div class="txt">
+                    <h1 style="font-size:5.2vw; color: aliceblue;">Sariraya.Co.Ltd.</h1>
+                    <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
+                </div>
+                <img src="{{ asset('assets/images/banner2.png') }}">
+            </div>
+            <div class="carousel-item">
+                <div class="txt">
+                    <h1 style="font-size:5.2vw; color: aliceblue;">Sariraya.Co.Ltd.</h1>
+                    <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
+                </div>
+                <img src="{{ asset('assets/images/banner3.png') }}">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--
+        <div class="slider" style="width:100%;">
     <div class="myslider" style="display: block; ">
         <div class="txt ml-n3">
             <h1 style="font-size:5.2vw; margin-bottom:1vw; color: aliceblue;">
@@ -10,8 +46,6 @@
         </div>
         <img src="{{ asset('assets/images/welcome.png') }}" style=" width:100%;" alt="">
     </div>
-
-    <!--
                                                                                     <div class="myslider fade">
                                                                                       <div class="txt">
                                                                                         <h1>Gambar 2</h1>
@@ -50,7 +84,7 @@
                 <img class="card-img-top" src="{{ asset('assets/images/a3.png') }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Tempe Factory</h5>
-                    <a class="card-text" href=""> know more -> </a>
+                    <a class="card-text" href="https://sariraya.com/tempe.html"> know more -> </a>
                 </div>
             </div>
         </div>
@@ -59,7 +93,7 @@
                 <img class="card-img-top" src="{{ asset('assets/images/a2.png') }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Online Shop</h5>
-                    <a class="card-text" href=""> know more -> </a>
+                    <a class="card-text" href="https://japanhalal.net"> know more -> </a>
                 </div>
             </div>
         </div>
@@ -68,7 +102,7 @@
                 <img class="card-img-top" src="{{ asset('assets/images/a1.png') }}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Halal Fried Chiken</h5>
-                    <a class="card-text" href=""> know more -> </a>
+                    <a class="card-text" href="https://hfcjapan.jp/"> know more -> </a>
                 </div>
             </div>
         </div>
