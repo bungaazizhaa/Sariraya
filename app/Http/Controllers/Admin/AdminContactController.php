@@ -56,6 +56,6 @@ class AdminContactController extends Controller
     public function delete($id_contact)
     {
         $this->ContactModel->deleteData($id_contact);
-        return redirect()->route('contact')->with('pesan', 'Data berhasil dihapus.');
+        return redirect()->route('contact.index')->with('pesan', 'Data berhasil dihapus.');
     }
 }

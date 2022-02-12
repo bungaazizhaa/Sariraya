@@ -57,8 +57,8 @@
                                             class="form-control" id="exampleFormControlInput1" placeholder="" />
                                     </div>
                                     <div class="form-group">
-                                        {{-- <label for="exampleFormControlInput1">State</label> --}}
-                                        <input type="hidden" name="state" value="Jepang" class="form-control"
+                                        <label for="exampleFormControlInput1">State</label>
+                                        <input type="text" name="state" class="form-control"
                                             id="exampleFormControlInput1" placeholder="" />
                                     </div>
                                     <div class="form-group">
