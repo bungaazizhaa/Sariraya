@@ -24,14 +24,34 @@
     @include('layouts.navbar')
 
     <!-- Slider -->
-    <div class="slider" style="width:100%;">
-        <div class="myslider" style="display: block; ">
-            <div class="txt ml-n3">
-                <h1 style="font-size:5.2vw; margin-bottom:1vw; color: aliceblue;">
-                    ABOUT US</h1>
-                {{-- <p style="font-size:2.2vw; margin-top:0.125vw;">Pioneer INDONESIAN Halal Food Company in JAPAN.</p> --}}
+    <div class="slider-tempe">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="txt">
+                        <h1>ABOUT US</h1>
+                    </div>
+                    <img src="{{ asset('assets/images/banner1.png') }}">
+                </div>
+                <div class="carousel-item">
+                    <div class="txt">
+                        <h1>ABOUT US</h1>
+                    </div>
+                    <img src="{{ asset('assets/images/banner3.png') }}">
+                </div>
+                <div class="carousel-item">
+                    <div class="txt">
+                        <h1>ABOUT US</h1>
+                    </div>
+                    <img src="{{ asset('assets/images/banner2.png') }}">
+                </div>
             </div>
-            <img src="{{ asset('assets/images/foto1.jpg') }}" style=" width:100%;" alt="">
+
         </div>
     </div>
 
@@ -48,11 +68,11 @@
                 <table>
                     <thead>
                         @foreach ($getAllProfil as $profil)
-                            <tr class="data-profil">
-                                <th style="width: 45%">{{ $profil->judul_profil }}</th>
-                                <td style="width: 55%">: {!! $profil->isi_profil !!}
-                                </td>
-                            </tr>
+                        <tr class="data-profil">
+                            <th style="width: 45%">{{ $profil->judul_profil }}</th>
+                            <td style="width: 55%">: {!! $profil->isi_profil !!}
+                            </td>
+                        </tr>
                         @endforeach
                     </thead>
                 </table>
