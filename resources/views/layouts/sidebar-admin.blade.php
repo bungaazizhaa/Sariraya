@@ -3,7 +3,7 @@
     <button class="btn btn-link me-3 sidebarToggle" onclick="openNav()" id="sidebarToggle" href="#!"><i
             class="fas fa-bars"></i></button>
     <!-- Navbar Brand-->
-    <a class="navbar-brand d-none d-md-inline ms-2" href="/">Sariraya.com</a>
+    <a class="navbar-brand ms-2" href="/">Sariraya.com</a>
     <!-- Navbar-->
     <div class="dropdown d-flex ml-auto">
         <a class="btn btn-secondary dropdown-toggle bg-transparent" href="#" role="button" id="dropdownMenuLink"

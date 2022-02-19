@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="{{ asset('assets/images/bunga2.png') }}" type="image/x-icon">
-
 </head>
 
 <body>

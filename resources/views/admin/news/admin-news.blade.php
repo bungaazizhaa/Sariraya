@@ -23,9 +23,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>ID</th>
-                            <th>Judul</th>
+                            {{-- <th>ID</th> --}}
                             <th>Picture</th>
+                            <th>Judul</th>
                             <th>Tgl Berita</th>
                             <th>Isi</th>
                             <th>Tgl di Input</th>
@@ -39,11 +39,14 @@
                         @foreach ($news as $data)
                             <tr>
                                 <td>{{ $no++ }}</td>
-                                <td>{{ $data->id_news }}</td>
-                                <td>{{ $data->judul_news }}</td>
-                                <td><img src="{{ url('gambar_news/' . $data->gambar_news) }}" alt="" width="230px">
+                                {{-- <td>{{ $data->id_news }}</td> --}}
+                                <td>
+                                    <div class="card-img-top"
+                                        style="background-image: url('{{ url('gambar_news/' . $data->gambar_news) }}'); max-height:140px;height:140px; width:140px; background-size:cover; background-position:center; background-color: black; display: block;">
+                                    </div>
                                 </td>
-                                <td>{{ $data->tanggal_news }}</td>
+                                <th>{{ $data->judul_news }}</th>
+                                <td>{{ date('d F Y', strtotime($data->tanggal_news)) }}</td>
                                 <td>{!! Str::limit(strip_tags($data->isi_news), 160) !!}</td>
                                 <td>{{ $data->created_at }}</td>
                                 <td class="text-center">

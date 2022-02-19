@@ -104,19 +104,27 @@
     </div>
 
     {{-- Script Only For This Page --}}
+
     <script>
         $(document).ready(function() {
             $('#summernote').summernote({
+                fontSizes: ['8', '9', '10', '11', '12', '14', '16', '18', '20', '24', '28', '32', '36',
+                    '48'
+                ],
+                lineHeights: ['0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
                 toolbar: [
                     ['style', ['style']],
                     ['font', ['bold', 'underline', 'italic', 'clear']],
+                    ['fontsize', ['fontsize']],
                     ['color', ['color']],
                     ['para', ['ul', 'ol', 'paragraph']],
                     ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video']],
-                    ['view', ['fullscreen', 'codeview', 'help']]
-                ]
+                    ['height', ['height']],
+                    ['insert', ['link', 'picture', 'video', 'addclass']],
+                    ['view', ['codeview', 'help']]
+                ],
             });
+
         });
     </script>
     <script type="text/javascript">
