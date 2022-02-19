@@ -27,7 +27,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link {{ Request::segment(1) === 'home' ? 'text-success' : null }}" href="/home">Home</a></li>
+            <li class="nav-item"><a class="nav-link {{ Request::segment(1) === 'home' || Request::segment(1) == null ? 'text-success' : null }}" href="/home">Home</a></li>
             <li class="nav-item"><a class="nav-link {{ Request::segment(1) === 'about' ? 'text-success' : null }}" href="/about">About
                     Us</a></li>
             <li class="nav-item"><a class="nav-link {{ Request::segment(1) === 'news' ? 'text-success' : null }}" href="/news">News</a></li>

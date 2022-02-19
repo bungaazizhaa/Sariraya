@@ -4,7 +4,7 @@
                 <div class=" d-flex justify-content-center">
                     <img class="mb-2" src="{{ asset('assets/images/logo.png') }}" alt="" width="150px">
                 </div>
-                <small class="d-block mb-3 ml-5 text-white text-center">&copy; Pioneer INDONESIAN halal foods
+                <small class="d-block mb-3 mx-5 text-white text-center">&copy; Pioneer INDONESIAN halal foods
                     company in Japan</small>
                 <div class="social mb-3  d-flex justify-content-center">
                     <img src="{{ asset('assets/images/gm.png') }}" height="36px" alt="">

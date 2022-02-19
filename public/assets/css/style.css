@@ -813,23 +813,23 @@ td.tabel-profil {
     border-radius: 10px;
 }
 
-.row-kontak .kepada {
-    /* margin-top: 50%; */
-    /* margin-left: 10%; */
-}
+/* .row-kontak .kepada {
+    margin-top: 50%;
+    margin-left: 10%;
+} */
 
 .row-kontak h2 {
     font-weight: bold;
 }
 
-.indo {
-    /* margin-top: 30%; */
-}
+/* .indo {
+    margin-top: 30%;
+} */
 
-.info {
-    /* margin-top: 30%; */
-    /* padding-bottom: 50px; */
-}
+/* .info {
+    margin-top: 30%;
+    padding-bottom: 50px;
+} */
 
 .info table {
     margin: 0 auto;

@@ -1,9 +1,9 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    <!-- Navbar Brand-->
-    <a class="navbar-brand d-none d-md-inline ps-3" href="/">Sariraya.com</a>
     <!-- Sidebar Toggle-->
-    <button class="btn btn-link btn-sm me-4 me-lg-0 d-flex mr-auto" onclick="openNav()" id="sidebarToggle" href="#!"><i
+    <button class="btn btn-link me-3 sidebarToggle" onclick="openNav()" id="sidebarToggle" href="#!"><i
             class="fas fa-bars"></i></button>
+    <!-- Navbar Brand-->
+    <a class="navbar-brand d-none d-md-inline ms-2" href="/">Sariraya.com</a>
     <!-- Navbar-->
     <div class="dropdown d-flex ml-auto">
         <a class="btn btn-secondary dropdown-toggle bg-transparent" href="#" role="button" id="dropdownMenuLink"
@@ -54,3 +54,15 @@
             </div>
         </nav>
     </div>
+
+    <script>
+        var toggle = document.getElementById('sidebarToggle');
+        window.onload = function() {
+
+            toggle.onclick = function() {
+                document.getElementById('layoutSidenav_nav').classList.toggle('toggled');
+                document.getElementById('layoutSidenav_content').classList.toggle('toggled');
+            }
+
+        }
+    </script>
