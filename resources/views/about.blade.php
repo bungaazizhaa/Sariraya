@@ -36,19 +36,25 @@
                     <div class="txt">
                         <h1>ABOUT US</h1>
                     </div>
-                    <img src="{{ asset('assets/images/banner1.png') }}">
+                    <div class="slider-img"
+                        style="background-image: url('{{ asset('assets/images/banner1.png') }}');">
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <div class="txt">
                         <h1>ABOUT US</h1>
                     </div>
-                    <img src="{{ asset('assets/images/banner3.png') }}">
+                    <div class="slider-img"
+                        style="background-image: url('{{ asset('assets/images/banner3.png') }}');">
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <div class="txt">
                         <h1>ABOUT US</h1>
                     </div>
-                    <img src="{{ asset('assets/images/banner2.png') }}">
+                    <div class="slider-img"
+                        style="background-image: url('{{ asset('assets/images/banner2.png') }}');">
+                    </div>
                 </div>
             </div>
 
@@ -61,18 +67,19 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 mt-4 text-center">
-                <img src="{{ asset('assets/images/fotoprofil.jpg') }}" width="100%" alt="" class="img-fluid rounded" />
+                <img src="{{ asset('assets/images/fotoprofil.jpg') }}" width="100%" alt=""
+                    class="img-fluid rounded" />
             </div>
             <div class="col-lg-6 tabel-profil">
                 <h2>PROFILE</h2>
                 <table>
                     <thead>
                         @foreach ($getAllProfil as $profil)
-                        <tr class="data-profil">
-                            <th style="width: 45%">{{ $profil->judul_profil }}</th>
-                            <td style="width: 55%">: {!! $profil->isi_profil !!}
-                            </td>
-                        </tr>
+                            <tr class="data-profil">
+                                <th style="width: 45%">{{ $profil->judul_profil }}</th>
+                                <td style="width: 55%">: {!! $profil->isi_profil !!}
+                                </td>
+                            </tr>
                         @endforeach
                     </thead>
                 </table>

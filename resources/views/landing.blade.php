@@ -15,21 +15,26 @@
                         <h1>Sariraya.Co.Ltd.</h1>
                         <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
                     </div>
-                    <img src="{{ asset('assets/images/banner1.png') }}">
+                    <div class="slider-img" style="background-image: url('{{ asset('assets/images/banner1.png') }}');">
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <div class="txt">
                         <h1>Sariraya.Co.Ltd.</h1>
                         <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
                     </div>
-                    <img src="{{ asset('assets/images/banner2.png') }}">
+                    <div class="slider-img"
+                        style="background-image: url('{{ asset('assets/images/banner2.png') }}');">
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <div class="txt">
                         <h1>Sariraya.Co.Ltd.</h1>
                         <p>Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
                     </div>
-                    <img src="{{ asset('assets/images/banner3.png') }}">
+                    <div class="slider-img"
+                        style="background-image: url('{{ asset('assets/images/banner3.png') }}');">
+                    </div>
                 </div>
             </div>
 
@@ -37,39 +42,39 @@
     </div>
 
     <!--
-                                                                            <div class="slider" style="width:100%;">
-                                                                        <div class="myslider" style="display: block; ">
-                                                                            <div class="txt ml-n3">
-                                                                                <h1 style="font-size:5.2vw; margin-bottom:1vw; color: aliceblue;">
-                                                                                    Sariraya.Co.Ltd.</h1>
-                                                                                <p style="font-size:2.2vw; margin-top:0.125vw;">Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
-                                                                            </div>
-                                                                            <img src="{{ asset('assets/images/welcome.png') }}" style=" width:100%;" alt="">
-                                                                        </div>
-                                                                                                                                                        <div class="myslider fade">
-                                                                                                                                                          <div class="txt">
-                                                                                                                                                            <h1>Gambar 2</h1>
-                                                                                                                                                            <p>deskripsi</p>
-                                                                                                                                                          </div>
-                                                                                                                                                          <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
-                                                                                                                                                        </div>
-                                                                                                                                                        <div class="myslider fade">
-                                                                                                                                                          <div class="txt">
-                                                                                                                                                            <h1>Gambar 3</h1>
-                                                                                                                                                            <p>deskripsi</p>
-                                                                                                                                                          </div>
-                                                                                                                                                          <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
-                                                                                                                                                        </div>
+                                                                                                                                <div class="slider" style="width:100%;">
+                                                                                                                            <div class="myslider" style="display: block; ">
+                                                                                                                                <div class="txt ml-n3">
+                                                                                                                                    <h1 style="font-size:5.2vw; margin-bottom:1vw; color: aliceblue;">
+                                                                                                                                        Sariraya.Co.Ltd.</h1>
+                                                                                                                                    <p style="font-size:2.2vw; margin-top:0.125vw;">Pioneer INDONESIAN Halal Food Company in JAPAN.</p>
+                                                                                                                                </div>
+                                                                                                                                <img src="{{ asset('assets/images/welcome.png') }}" style=" width:100%;" alt="">
+                                                                                                                            </div>
+                                                                                                                                                                                                            <div class="myslider fade">
+                                                                                                                                                                                                              <div class="txt">
+                                                                                                                                                                                                                <h1>Gambar 2</h1>
+                                                                                                                                                                                                                <p>deskripsi</p>
+                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                              <img src="{{ asset('assets/images/2.png') }}" alt="" style="width:100%; height:100%;">
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                            <div class="myslider fade">
+                                                                                                                                                                                                              <div class="txt">
+                                                                                                                                                                                                                <h1>Gambar 3</h1>
+                                                                                                                                                                                                                <p>deskripsi</p>
+                                                                                                                                                                                                              </div>
+                                                                                                                                                                                                              <img src="{{ asset('assets/images/3.png') }}" alt="" style="width:100%; height:100%;">
+                                                                                                                                                                                                            </div>
 
-                                                                                                                                                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                                                                                                                                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                                                                                                                                                        
-                                                                                                                                                        <div class="dotsbox" style="text-align: center;">
-                                                                                                                                                          <span class="dot" onclick="currentSlide(1)"></span>
-                                                                                                                                                          <span class="dot" onclick="currentSlide(2)"></span>
-                                                                                                                                                          <span class="dot" onclick="currentSlide(3)"></span>
-                                                                                                                                                        </div>
-                                                                                                                                                      </div>-->
+                                                                                                                                                                                                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                                                                                                                                                                                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                                                                                                                                                                                            
+                                                                                                                                                                                                            <div class="dotsbox" style="text-align: center;">
+                                                                                                                                                                                                              <span class="dot" onclick="currentSlide(1)"></span>
+                                                                                                                                                                                                              <span class="dot" onclick="currentSlide(2)"></span>
+                                                                                                                                                                                                              <span class="dot" onclick="currentSlide(3)"></span>
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                          </div>-->
 
     </div>
 
@@ -84,7 +89,7 @@
                     <img class="card-img-top" src="{{ asset('assets/images/a3.png') }}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Tempe Factory</h5>
-                        <a class="card-text" href="https://sariraya.com/tempe.html"> know more -> </a>
+                        <a class="card-text" href="/factory/tempe-factory"> know more -> </a>
                     </div>
                 </div>
             </div>

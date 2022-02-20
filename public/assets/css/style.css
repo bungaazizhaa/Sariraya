@@ -769,7 +769,7 @@ td.tabel-profil {
         top: -30px;
     }
     .timeline ul li:hover::before {
-        background-color: aqua;
+        background-color: #ff5400;
     }
 }
 
@@ -878,10 +878,14 @@ td.tabel-profil {
     margin-top: 30px;
 }
 
-.slider-tempe img {
+.slider-tempe .slider-img {
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-color: rgb(255, 255, 255);
+    display: block;
     min-height: 250px;
-    height: 100%;
+    height: 80vmin;
     width: 100vw;
 }
 
@@ -893,4 +897,49 @@ td.tabel-profil {
 
 .pecel {
     justify-content: center;
+}
+
+/*Scroll bar nav*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-border-radius: auto;
+    border-radius: auto;
+    background: #ffffff20;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: auto;
+    border-radius: auto;
+    background: #555;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: auto;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff5400;
+}
+
+.dropdown-menu {
+    padding: 10px 10px;
+    margin: 0px 10px;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    transition: 0.3s;
+}
+.navbar a {
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.text-success {
+    border-radius: 10px;
+    background-color: #00000010 !important;
+    color: #2c7e3f;
 }
