@@ -44,12 +44,12 @@
                                 <td class="text-center">
                                     <a href="/admin-profil/editprofil/{{ $data->id_profil }}" id=""><i
                                             style="color:#35C668" class="fas fa-edit"></i></a>
-                                            @if (($data->id_profil) > 3)
-                                            <button type="button" class="btn bg-transparent" data-toggle="modal"
-                                                    data-target="#deleteProfil{{ $data->id_profil }}"><i style="color:#C43030"
-                                                        class="fas fa-trash color-danger trash-keynote"></i>
-                                                </button>
-                                                @endif
+                                    @if (4 <= $data->id_profil && $data->id_profil <= 996)
+                                        <button type="button" class="btn bg-transparent" data-toggle="modal"
+                                            data-target="#deleteProfil{{ $data->id_profil }}"><i style="color:#C43030"
+                                                class="fas fa-trash color-danger trash-keynote"></i>
+                                        </button>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
@@ -61,30 +61,30 @@
 
     <!-- Akhir Isi Profil -->
 
-<!-- Modal Delete News-->
-@foreach ($profil as $data)
-<div class="modal fade" id="deleteProfil{{ $data->id_profil }}" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Hapus Profil</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Anda ingin menghapus Profil "{{ $data->judul_profil }}" ?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" focused>Batal</button>
-                <a href="/admin-profil/deleteprofil/{{ $data->id_profil }}" type="button"
-                    class="btn btn-danger">Hapus</a>
+    <!-- Modal Delete News-->
+    @foreach ($profil as $data)
+        <div class="modal fade" id="deleteProfil{{ $data->id_profil }}" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Hapus Profil</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Anda ingin menghapus Profil "{{ $data->judul_profil }}" ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" focused>Batal</button>
+                        <a href="/admin-profil/deleteprofil/{{ $data->id_profil }}" type="button"
+                            class="btn btn-danger">Hapus</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-@endforeach
+    @endforeach
 
     </div>
     </main>

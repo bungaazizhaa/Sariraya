@@ -40,7 +40,7 @@
                                     <td>{{ $data->company }}</td>
                                     <td>{{ $data->state }}</td>
                                     <td>{{ $data->telephone }}</td>
-                                    <td>{{ $data->created_at }}</td>
+                                    <td>{{ date('d F Y H:i:s', strtotime($data->created_at)) }} WIB</td>
                                     <td class="text-center">
                                         <button type="button" class="btn bg-transparent" data-toggle="modal"
                                             data-target="#deleteContact{{ $data->id_contact }}"><i style="color:#C43030"

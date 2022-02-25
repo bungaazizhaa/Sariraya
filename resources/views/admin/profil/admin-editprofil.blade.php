@@ -13,15 +13,16 @@
                 <form action="/admin-profil/updateprofil/{{ $profil->id_profil }}" method="POST">
                     @csrf
                     <div class="form-group mb-2">
-                        @if (($profil->id_profil) > 3)
-                        <label class="mb-1" for="judulNewsInput">ID</label>
+                        @if (4 <= $profil->id_profil && $profil->id_profil <= 996)
+                            <label class="mb-1 font-weight-bold" for="judulNewsInput">ID</label>
                         @endif
-                        <input name="id_profil" type="text"
-                        @if (($profil->id_profil) < 4)
-                        hidden
-                        @endif
-                        class="form-control" id="id_profil" placeholder=""
+                        <input name="id_profil" type="text" @if ($profil->id_profil < 4 || $profil->id_profil > 996) hidden @endif
+                            class="form-control" id="id_profil" placeholder=""
                             value="{{ old('id_profil', $profil->id_profil) }}">
+                        @if (4 <= $profil->id_profil && $profil->id_profil <= 996)
+                            <small>Angka yang menentukan Urutan Tampilan, Tidak Boleh Sama dengan yang sudah
+                                Ada, Tidak boleh angka 1, 2, 3, 997, 998, dan 999.</small>
+                        @endif
                         <div class="text-danger">
                             @error('id_profil')
                                 {{ $message }}
@@ -29,14 +30,11 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        @if (($profil->id_profil) > 3)
-                        <label class="mb-1" for="judulNewsInput">Username</label>
+                        @if (4 <= $profil->id_profil && $profil->id_profil <= 996)
+                            <label class="mb-1 font-weight-bold" for="judulNewsInput">Username</label>
                         @endif
-                        <input name="nama_profil" type="text"
-                        @if (($profil->id_profil) < 4)
-                        hidden
-                        @endif
-                        class="form-control" id="nama_profil" placeholder=""
+                        <input name="nama_profil" type="text" @if ($profil->id_profil < 4 || $profil->id_profil > 996) hidden @endif
+                            class="form-control" id="nama_profil" placeholder=""
                             value="{{ old('nama_profil', $profil->nama_profil) }}">
                         <div class="text-danger">
                             @error('nama_profil')
@@ -46,7 +44,7 @@
                     </div>
                     <div class="form-group mb-2">
 
-                        <label class="mb-1" for="judulNewsInput">Judul</label>
+                        <label class="mb-1 font-weight-bold" for="judulNewsInput">Judul</label>
                         <input name="judul_profil" type="text" class="form-control" id="judul_profil" placeholder=""
                             value="{{ old('judul_profil', $profil->judul_profil) }}">
                         <div class="text-danger">
@@ -56,7 +54,7 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="isiProfilInput">Isi</label>
+                        <label class="mb-1 font-weight-bold" for="isiProfilInput">Isi</label>
                         <textarea id="summernote" name="isi_profil" class="form-control" id="isi_profil"
                             rows="3">{{ old('isi_profil', $profil->isi_profil) }}</textarea>
                         <div class="text-danger">

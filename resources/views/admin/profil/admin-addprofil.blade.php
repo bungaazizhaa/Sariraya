@@ -10,12 +10,14 @@
                 <a href="{{ url('admin-profil') }}"><button class="btn btn-primary">Back</button></a>
             </div>
             <div class="card-body">
-                <form action="/admin-profil/insertprofil" method="POST" >
+                <form action="/admin-profil/insertprofil" method="POST">
                     @csrf
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="IdProfilInput">ID</label>
-                        <input name="id_profil" type="text" class="form-control" id="id_profil" placeholder="Angka yang menentukan Urutan Tampilan, Tidak Boleh Sama dengan yang sudah Ada"
-                            value="{{ old('id_profil') }}">
+                        <label class="mb-1 font-weight-bold" for="IdProfilInput">ID</label>
+                        <input name="id_profil" type="text" class="form-control" id="id_profil"
+                            placeholder="Angka diantara 4 sampai 996." value="{{ old('id_profil') }}">
+                        <small>Angka yang menentukan Urutan Tampilan, Tidak Boleh Sama dengan yang sudah
+                            Ada, Tidak boleh angka 1, 2, 3, 997, 998, dan 999.</small>
                         <div class="text-danger">
                             @error('id_profil')
                                 {{ $message }}
@@ -23,9 +25,9 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="judulProfilInput">Username</label>
-                        <input name="nama_profil" type="text" class="form-control" id="nama_profil" placeholder="hurufkecil_tanpaspasi"
-                            value="{{ old('nama_profil') }}">
+                        <label class="mb-1 font-weight-bold" for="judulProfilInput">Username</label>
+                        <input name="nama_profil" type="text" class="form-control" id="nama_profil"
+                            placeholder="hurufkecil_tanpaspasi" value="{{ old('nama_profil') }}">
                         <div class="text-danger">
                             @error('nama_profil')
                                 {{ $message }}
@@ -33,9 +35,9 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="judulProfilInput">Judul</label>
-                        <input name="judul_profil" type="text" class="form-control" id="judul_profil" placeholder="Nama Jabatan yang Akan Ditampilkan"
-                            value="{{ old('judul_profil') }}">
+                        <label class="mb-1 font-weight-bold" for="judulProfilInput">Judul</label>
+                        <input name="judul_profil" type="text" class="form-control" id="judul_profil"
+                            placeholder="Nama Jabatan yang Akan Ditampilkan" value="{{ old('judul_profil') }}">
                         <div class="text-danger">
                             @error('judul_profil')
                                 {{ $message }}
@@ -43,7 +45,7 @@
                         </div>
                     </div>
                     <div class="form-group mb-2">
-                        <label class="mb-1" for="isiProfilInput">Isi</label>
+                        <label class="mb-1 font-weight-bold" for="isiProfilInput">Isi</label>
                         <textarea id="summernote" name="isi_profil" class="form-control" id="isi_profil"
                             rows="3">{{ old('isi_profil') }}</textarea>
                         <div class="text-danger">
