@@ -398,6 +398,11 @@ article a {
     padding-top: 50px;
 }
 
+.teksdonlot span {
+    font-weight: bold;
+    font-style: italic;
+}
+
 /* News */
 
 .news h1 {
