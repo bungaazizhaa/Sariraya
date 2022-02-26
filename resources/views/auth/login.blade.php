@@ -55,13 +55,13 @@
                                             <button type="submit" class="btn btn-lg btn-primary d-flex mx-auto"
                                                 href="/admin-dashboard">{{ __('Login') }}
                                             </button>
-                                            @if (Route::has('password.request'))
+                                            {{-- @if (Route::has('password.request'))
                                                 <div>
                                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                                         {{ __('Forgot Your Password?') }}
                                                     </a>
                                                 </div>
-                                            @endif
+                                            @endif --}}
                                         </div>
                                     </form>
                                 </div>
