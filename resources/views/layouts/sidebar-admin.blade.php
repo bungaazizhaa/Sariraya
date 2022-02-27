@@ -2,6 +2,14 @@
     <!-- Sidebar Toggle-->
     <button class="btn btn-link me-3 sidebarToggle" onclick="openNav()" id="sidebarToggle" href="#!"><i
             class="fas fa-bars"></i></button>
+
+    <script>
+        var toggle = document.getElementById('sidebarToggle');
+        toggle.onclick = function() {
+            document.getElementById('layoutSidenav_nav').classList.toggle('toggled');
+            document.getElementById('layoutSidenav_content').classList.toggle('toggled');
+        }
+    </script>
     <!-- Navbar Brand-->
     <a class="navbar-brand ms-2" href="/">Sariraya.com</a>
     <!-- Navbar-->
@@ -54,15 +62,3 @@
             </div>
         </nav>
     </div>
-
-    <script>
-        var toggle = document.getElementById('sidebarToggle');
-        window.onload = function() {
-
-            toggle.onclick = function() {
-                document.getElementById('layoutSidenav_nav').classList.toggle('toggled');
-                document.getElementById('layoutSidenav_content').classList.toggle('toggled');
-            }
-
-        }
-    </script>
