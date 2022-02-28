@@ -35,7 +35,7 @@
                         <h1>ABOUT US</h1>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banner1.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banner1.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -43,7 +43,7 @@
                         <h1>ABOUT US</h1>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banner3.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banner3.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -51,7 +51,7 @@
                         <h1>ABOUT US</h1>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banner2.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banner2.jpg') }}');">
                     </div>
                 </div>
             </div>
