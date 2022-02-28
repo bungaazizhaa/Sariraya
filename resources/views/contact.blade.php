@@ -17,7 +17,7 @@
                         <p>For inquiries please follow the instructions
                             below:</p>
                     </div>
-                    <div class="slider-img" style="background-image: url('{{ asset('assets/images/banner4.png') }}');">
+                    <div class="slider-img" style="background-image: url('{{ asset('assets/images/banner4.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -28,7 +28,7 @@
                             below:</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banner2.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banner2.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -39,7 +39,7 @@
                             below:</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banner3.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banner3.jpg') }}');">
                     </div>
                 </div>
             </div>

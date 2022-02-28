@@ -16,7 +16,7 @@
                             with affordable price and good customer service.</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/bannertanuki1.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/bannertanuki1.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -26,7 +26,7 @@
                             with affordable price and good customer service.</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/bannertanuki2.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/bannertanuki2.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -36,7 +36,7 @@
                             with affordable price and good customer service.</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/bannertanuki3.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/bannertanuki2.jpg') }}');">
                     </div>
                 </div>
             </div>

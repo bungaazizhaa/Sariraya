@@ -16,7 +16,7 @@
                             with affordable price and good customer service.</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banneryonezu1.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banneryonezu1.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -26,7 +26,7 @@
                             with affordable price and good customer service.</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banneryonezu2.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banneryonezu2.jpg') }}');">
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -36,7 +36,7 @@
                             with affordable price and good customer service.</p>
                     </div>
                     <div class="slider-img"
-                        style="background-image: url('{{ asset('assets/images/banneryonezu3.png') }}');">
+                        style="background-image: url('{{ asset('assets/images/banneryonezu3.jpg') }}');">
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="row mb-lg-2 mb-lg-5 mx-lg-5 mx-sm-2 my-sm-2">
                 <div class="col-sm-4 mt-3">
                     <div class="card mycard1 text-center">
-                        <img class="card-img-top" src="{{ asset('assets/images/yonezu1.jpeg') }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('assets/images/yonezu1.jpg') }}" alt="Card image cap">
 
                     </div>
                 </div>
